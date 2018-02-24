@@ -6,20 +6,47 @@
 
 ***
 
-## Flujo de trabajo
+## Descripción
+Crear una app web bajo los principios de SPA (Single page aplication).
 
-1. Debes realizar un [**fork**](https://gist.github.com/ivandevp/1de47ae69a5e139a6622d78c882e1f74)
-   de este repositorio.
+Para ello debes entender y aplicar los siguientes conceptos.
 
-2. Luego deberás **clonar** tu fork en tu máquina. Recuerda que el comando a usar
-   es `git clone` y su estructura normalmente se ve así:
+* Templating
+* Routing (URLs)
+* DOM & Event Handling (State)
+* Patrón de arquitectura de software (MV*)
 
-   ```bash
-   git clone https://github.com/<nombre-de-usuario>/freelancer.git
-   ```
 
-3. Cuando hayas terminado tu producto, envía un Pull Request a este repositorio
-   (puedes solicitar apoyo de tus profes para este paso).
 
-> Nota: No olvides que es una buena práctica describir tu proyecto en este
-> archivo `README.md` y también desplegar tu web a Github Pages :smiley:.
+
+##  Recursos utilizados
+
+* HTML5
+* CSS
+* JQUERY
+* Eslintrc 
+
+
+## Autor
+
+* Pamela Rojas
+* Jymma Mogollon
+
+
+## Archivos utilizados
+
+* README.md con descripción del proyecto con la  API NY Times.
+* index.html: Página web.
+* .eslintrc con configuración para linter.
+* .gitignore para ignorar node_modules u otras carpetas que no deban incluirse en control de versiones.
+* package.json con nombre, versión, descripción, autores, licencia, dependencias, scripts (pretest, test, ...)
+
+
+## Producto
+
+![](public/assets/image/readmeImage.png)
+
+
+## Licencia
+
+*Copyright (C) 2018 ~ *
