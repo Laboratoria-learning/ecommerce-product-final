@@ -32,8 +32,21 @@ footer p {
 }
 .footer{
   background-color: #ce3f3f;
-}      
+}
 .copyright{
   color: white;
- 
+}
+.section {
+	z-index: 1;
+	min-height:420px;
+	width: 100%;
+	overflow:auto;
+	height:100%;
+	padding-top:100px;
+	padding-bottom:50px;
+	display:none;
+	top:0;
+}
+#shadow {
+	display: block;
 }
