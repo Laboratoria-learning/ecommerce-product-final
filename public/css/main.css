@@ -6,5 +6,34 @@
 
 body{
   font-family:Raleway,sans-serif;
+}
 
+.fa-search, .fa-home, .fa-user{
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.brand-logo{
+  margin-left: 1rem;
+}
+
+.slider{
+  margin-left: 6%;
+  margin-top: 3%;
+}
+/*Footer*/
+footer {
+  padding: 25px 0;
+  height: 70px;
+}
+footer p {
+  margin: 0;
+}
+.footer{
+  background-color: #ce3f3f;
+}      
+.copyright{
+  color: white;
+ 
 }
