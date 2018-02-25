@@ -58,7 +58,6 @@ $(document).ready(function() {
       };
       const payRequest = new PaymentRequest(payMethod, payDetail);
       payRequest.show();
-      
   });
 
 });
