@@ -23,7 +23,7 @@ $(document).ready(function() {
       };
       const peticionPago = new PaymentRequest(metodopago, detallePago);
       peticionPago.show();
-  });
+  }); 
 
 
 
