@@ -1,4 +1,4 @@
-# E-commerce
+# E-COMMERCE
 
 * **Track:** _Especialización Front-end_
 * **Curso:** _CONSTRUYE UNA SINGLE PAGE APP (SPA) MULTI-USUARIO CONSUMIENDO DATA REMOTA_
@@ -6,20 +6,15 @@
 
 ***
 
-## Flujo de trabajo
+## Introduccion  
+> Crear una plataforma e-commerce que pueda interactuar con un API de productos y otro API de pagos.
 
-1. Debes realizar un [**fork**](https://gist.github.com/ivandevp/1de47ae69a5e139a6622d78c882e1f74)
-   de este repositorio.
+## APIs Usados
+1. Para la plataforma de productos...
+2. Para realizar los pagos se ha usado el API de Google Pay.
 
-2. Luego deberás **clonar** tu fork en tu máquina. Recuerda que el comando a usar
-   es `git clone` y su estructura normalmente se ve así:
-
-   ```bash
-   git clone https://github.com/<nombre-de-usuario>/freelancer.git
-   ```
-
-3. Cuando hayas terminado tu producto, envía un Pull Request a este repositorio
-   (puedes solicitar apoyo de tus profes para este paso).
-
-> Nota: No olvides que es una buena práctica describir tu proyecto en este
-> archivo `README.md` y también desplegar tu web a Github Pages :smiley:.
+## HERRAMIENTAS UTILIZADAS
+> 
+- **Express.js:** Framework para Node.js
+- **Nodemon:** Vigilará los cambios que se realicen en nuestro archivo mientras estamos con el servidor activado.
+- **Semantic UI:** Framework para CSS.
