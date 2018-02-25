@@ -36,7 +36,6 @@ input[type=number] {
   margin-bottom: 18px;
 }
 
-
 .quantity-nav {
   float: left;
   position: relative;
@@ -73,4 +72,10 @@ input[type=number] {
   position: absolute;
   bottom: -1px;
   height: 50%;
+}
+
+.product-car img {
+  width: 70px;
+  display: block;
+  margin: 0 auto;
 }
