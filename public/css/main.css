@@ -6,12 +6,13 @@
 
 body{
   font-family:Raleway,sans-serif;
+  background-color: black;
 }
 
-.fa-search, .fa-home, .fa-user{
+.fa-search, .fa-home, .fa-user, .fa-shopping-cart{
   font-size: 1.5rem;
   margin-left: 1rem;
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 
 .brand-logo{
@@ -26,6 +27,7 @@ body{
 footer {
   padding: 25px 0;
   height: 70px;
+ margin-top: 100%;
 }
 footer p {
   margin: 0;
