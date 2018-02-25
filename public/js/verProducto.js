@@ -4,30 +4,6 @@ $(document).ready(function() {
   console.log($amountProduct.text());
   var productId = getParameterByName('product_id');
 
-  $('.to-pay').on('click', function () {
-    console.log(this);
-      const metodopago = [
-        {
-          supportedMethods: ['basic-card']
-        }
-      ];
-  
-      const detallePago = {
-        total: {
-          label: 'total de los productos',
-          amount : {
-            currency: 'PEN',
-            value: `${$amountProduct.text()}`
-          }
-        }
-      };
-      const peticionPago = new PaymentRequest(metodopago, detallePago);
-      peticionPago.show();
-  }); 
-
-
-
-
 
   // contador de items
   $('.quantity').each(function () {
@@ -38,33 +14,51 @@ $(document).ready(function() {
     const min = input.attr('min');
     const max = input.attr('max');
 
-
-    $('.quantity-nav').on();
-
-
-    // btnUp.click(function () {
-    //   var oldValue = parseFloat(input.val());
-    //   if (oldValue >= max) {
-    //     var newVal = oldValue;
-    //   } else {
-    //     var newVal = oldValue + 1;
-    //   }
+    btnUp.click(function () {
+      var oldValue = parseFloat(input.val());
+      if (oldValue >= max) {
+        var newVal = oldValue;
+      } else {
+        var newVal = oldValue + 1;
+      }
       
-    //   console.log(oldValue);
-    //   spinner.find("input").val(newVal);
-    //   spinner.find("input").trigger("change");
-    // });
+      spinner.find("input").val(newVal);
+      spinner.find("input").trigger("change");
+    });
 
-    // btnDown.click(function () {
-    //   var oldValue = parseFloat(input.val());
-    //   if (oldValue <= min) {
-    //     var newVal = oldValue;
-    //   } else {
-    //     var newVal = oldValue - 1;
-    //   }
-    //   spinner.find("input").val(newVal);
-    //   spinner.find("input").trigger("change");
-    // });
+    btnDown.click(function () {
+      var oldValue = parseFloat(input.val());
+      if (oldValue <= min) {
+        var newVal = oldValue;
+      } else {
+        var newVal = oldValue - 1;
+      }
+      spinner.find("input").val(newVal);
+      spinner.find("input").trigger("change");
+    });
+  });
+
+  // API Google Pay
+  $('.to-pay').on('click', function () {
+    console.log(this);
+      const payMethod = [
+        {
+          supportedMethods: ['visa', 'pay-pal','mastercard']
+        }
+      ];
+  
+      const payDetail = {
+        total: {
+          label: 'total de los productos',
+          amount : {
+            currency: 'PEN',
+            value: `${$amountProduct.text()*$('.quantity').find('input').val()}`
+          }
+        }
+      };
+      const payRequest = new PaymentRequest(payMethod, payDetail);
+      payRequest.show();
+      
   });
 
 });
