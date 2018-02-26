@@ -15,12 +15,11 @@ var section;
   				$(section).addClass( 'shown' );
   				// Añadir seccion elegida
   				var newSection = $( $(section).attr('href') );
+          mostrarTodosTemas();
   				newSection.fadeIn( 1000 );
   			} );
   		}
   	});
-
-
 
 
 });
