@@ -4,21 +4,21 @@ $(document).ready(function () {
     draggable: true
   });
 
-var section;
+  var section;
 
-  $('a', '.side-nav').click(function(){
-  		if( ! $(this).hasClass('shown') ) {
-  			section = this;
-  			// Desaparecer todas las secciones con efecto fade
-  			$('.section:visible').fadeOut( 1000, function() {
-  				$('a', '.side-nav').removeClass( 'shown' );
-  				$(section).addClass( 'shown' );
-  				// Añadir seccion elegida
-  				var newSection = $( $(section).attr('href') );
-  				newSection.fadeIn( 1000 );
-  			} );
-  		}
-  	});
+  $('a', '.side-nav').click(function () {
+    if (!$(this).hasClass('shown')) {
+      section = this;
+      // Desaparecer todas las secciones con efecto fade
+      $('.section:visible').fadeOut(1000, function () {
+        $('a', '.side-nav').removeClass('shown');
+        $(section).addClass('shown');
+        // Añadir seccion elegida
+        var newSection = $($(section).attr('href'));
+        newSection.fadeIn(1000);
+      });
+    }
+  });
 
 
 
