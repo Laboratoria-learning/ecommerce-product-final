@@ -18,14 +18,41 @@ body{
   font-size: 1.8rem;
   margin-left: 4%;
 }
-
+.navbar-collapse{
+  margin-top: 4%;
+}
 #hom{
 margin-left: 2%;
 }
-.navbar-collapse{
-  margin-top: 5%;
-}
+
 .d-block{
  width: 100%;
- margin-top: 7%;
+ margin:6.5%;
+}
+
+footer {
+  padding: 25px 0;
+  margin-top: 1%;
+}
+footer p {
+  margin: 0;
+}
+.footer{
+  background-color: #292829;
+  color:white;
+}
+.copy{
+  font-size: 10px;
+}
+
+/*phones*/
+@media (min-width: 0) and (max-width: 767px) {
+ 
+  footer {
+    padding: 25px 0;
+    margin-top: 6%;
+  }
+  .d-block{
+    margin-top: 5%;
+   }
 }
