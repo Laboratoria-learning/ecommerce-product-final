@@ -12,3 +12,20 @@ body{
 .logo{
   height: 5rem;
 }
+
+.fa-shopping-cart, .fa-user-circle{
+  color: white;
+  font-size: 1.8rem;
+  margin-left: 4%;
+}
+
+#hom{
+margin-left: 2%;
+}
+.navbar-collapse{
+  margin-top: 5%;
+}
+.d-block{
+ width: 100%;
+ margin-top: 7%;
+}

@@ -180,8 +180,6 @@ function getFetch() {
             <div class="col-8 col-md-6">
               <h6>${data.results[i].title}</h6>
               <h5>S/.${data.results[i].price}</h5>
-              <span><i class="fa fa-truck"></i> Envio a todo el País<span>
-              <p> ${data.results[i].sold_quantity}  vendidos-Lima</p>
               <button type="button" class="btn btn-warning">Comprar</button>
             </div>
           </div><hr>`;
