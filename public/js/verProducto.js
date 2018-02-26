@@ -3,7 +3,6 @@ $(document).ready(function () {
   var $amountProduct = $('.amount-product');
   var productId = getParameterByName('product_id');
 
-
   // contador de items
   $('.quantity').each(function () {
     const spinner = $(this);
@@ -37,35 +36,12 @@ $(document).ready(function () {
     });
   });
 
-
-  $('.add-cart').on('click', function () {
-    console.log($amountProduct.text());
-    // console.log($amountProduct.text() * $('.quantity').find('input').val());
-    console.log($('.quantity').find('input').val());
-    console.log($(this));
-    localStorage.setItem('quantity-item', $('.quantity').find('input').val());
-    $('#cart-quatity').text($('.quantity').find('input').val());
+  // Evento para guardar la cantidad de productos seleccionados en el local storage
+  // y mostrando en el carrito
+  $('#add-cart').on('click', function () {
+    let quantityPicked = $('.quantity').find('input').val();
+    localStorage.setItem('quantity-item', quantityPicked);
+    $('#cart-quatity').text(quantityPicked);
   });
-  // // API Google Pay
-  // $('.to-pay').on('click', function () {
-  //   console.log(this);
-  //     const payMethod = [
-  //       {
-  //         supportedMethods: ['visa', 'pay-pal','mastercard']
-  //       }
-  //     ];
-
-  //     const payDetail = {
-  //       total: {
-  //         label: 'total de los productos',
-  //         amount : {
-  //           currency: 'PEN',
-  //           value: `${$amountProduct.text()*$('.quantity').find('input').val()}`
-  //         }
-  //       }
-  //     };
-  //     const payRequest = new PaymentRequest(payMethod, payDetail);
-  //     payRequest.show();
-  // });
 
 });

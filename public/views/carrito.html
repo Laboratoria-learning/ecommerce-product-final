@@ -33,7 +33,7 @@
           <div class="ui vertical  button" tabindex="0">
             <div class="visible content">
               <i class="shop icon"></i>
-              <div class="ui red circular small label">0</div>
+              <div class="ui red circular small label" id="quantity-selected">0</div>
             </div>
           </div>
         </div>
@@ -61,7 +61,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr class="row-product">
                 <td>
                   <div class="product-car">
                     <img src="../assets/images/cocina_alabama.jpeg" alt="">
@@ -88,11 +88,11 @@
                     </div>
                   </div>
                 </td>
-                <td>
-                  <b>S/. 69.90</b>
+                <td class="unit-price">
+                  S/. <b>69.90</b>
                 </td>
                 <td>
-                  <b>S/. 69.90</b>
+                  S/. <b>69.90</b>
                 </td>
                 <td>
                   <div class="ui left floated main menu">
@@ -102,7 +102,7 @@
                   </div>
                 </td>
               </tr>
-              <tr>
+              <tr class="row-product">
                 <td>
                   <div class="product-car">
                     <img src="../assets/images/televisor_samsung.jpeg" alt="">
@@ -129,11 +129,11 @@
                     </div>
                   </div>
                 </td>
-                <td>
-                  <b>S/. 999</b>
+                <td class="unit-price">
+                  S/. <b>999</b>
                 </td>
                 <td>
-                  <b>S/. 999</b>
+                  S/. <b>999</b>
                 </td>
                 <td>
                   <div class="ui left floated menu">
@@ -200,6 +200,7 @@
   <script src="../vendors/semantic/semantic.min.js"></script>
   <script src="../js/functions.js"></script>
   <script src="../js/verProducto.js"></script>
+  <script src="../js/carrito.js"></script>
 </body>
 
 </html>
