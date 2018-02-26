@@ -4,6 +4,13 @@ $(document).ready(function() {
   console.log($('#total-amount').find('span'));
   let eachQuantityBox = $('.row-product');
 
+  
+  $('#subtotal').find('span').text(Math.floor($('.total-price').find('span').text()));
+  $('#igv').find('span').text(Math.floor($('#subtotal').find('span').text() - (Math.floor($('#subtotal').find('span').text()) / 1.18)));
+  $('#total-amount').find('span').text(Math.floor($('#subtotal').find('span').text()) + Math.floor($('#igv').find('span').text()));
+
+
+
   // obteniendo lo guardado en el localStorage
   $('#quantity-selected').text(localStorage.getItem('quantity-item'));
 
@@ -21,6 +28,7 @@ $(document).ready(function() {
       // console.log($('#subtotal').find('span').text());
       $('#igv').find('span').text(Math.floor($('#subtotal').find('span').text() - (Math.floor($('#subtotal').find('span').text()) / 1.18)));
       $('#total-amount').find('span').text(Math.floor($('#subtotal').find('span').text()) + Math.floor($('#igv').find('span').text()));
+      
     });
   });
 
