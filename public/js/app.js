@@ -5,6 +5,7 @@ $(document).ready(function () {
   });
 
 var section;
+var newSection;
 
   $('a', '.side-nav').click(function(){
   		if( ! $(this).hasClass('shown') ) {
