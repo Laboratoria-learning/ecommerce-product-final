@@ -6,45 +6,9 @@
 
 body{
   font-family:Raleway,sans-serif;
-  background-color: whitesmoke;
+  background-color: rgb(253, 235, 235);
 }
 
-.fa-search, .fa-home, .fa-user, .fa-shopping-cart{
-  font-size: 1.5rem;
-  margin-left: 1rem;
-  margin-right: 2rem;
-}
-
-.brand-logo{
-  margin-left: 1rem;
-}
-
-/*Footer*/
-footer {
-  padding: 25px 0;
-  height: 70px;
- margin-top: 100%;
-}
-footer p {
-  margin: 0;
-}
-.footer{
-  background-color: #ce3f3f;
-}
-.copyright{
-  color: white;
-}
-.section {
-	z-index: 1;
-	min-height:420px;
-	width: 100%;
-	overflow:auto;
-	height:100%;
-	padding-top:100px;
-	padding-bottom:50px;
-	display:none;
-	top:0;
-}
-#shadow {
-	display: block;
+.logo{
+  height: 5rem;
 }
