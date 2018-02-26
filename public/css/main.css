@@ -6,7 +6,7 @@
 
 body{
   font-family:Raleway,sans-serif;
-  background-color: black;
+  background-color: whitesmoke;
 }
 
 .fa-search, .fa-home, .fa-user, .fa-shopping-cart{
@@ -19,10 +19,6 @@ body{
   margin-left: 1rem;
 }
 
-.slider{
-  margin-left: 6%;
-  margin-top: 3%;
-}
 /*Footer*/
 footer {
   padding: 25px 0;

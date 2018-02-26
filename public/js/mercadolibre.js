@@ -1,38 +1,21 @@
-let menu = $('#menu');
+$(document).ready(function () {
 
-let search = $('#sombras');
-let searchedForText;
+  var mostrarTodosTemas = function () {
+    $.getJSON('https://api.mercadolibre.com/sites/MPE/search?category=MPE118865', function (temas) {
+      temas.results.forEach(crearTema);
+    });
+  };
 
-menu.submit(function(e) {
-  e.preventDefault();
-  searchedForText = search.val();
-  getData();
+  var crearTema = function (tema) {
+
+    var $contenedorTema = $('<div />');
+    $contenedorTema.addClass('jumbotron');
+    $contenedorTema.append("<h6>Item: " + tema.title + "</h6>");
+    $contenedorTema.append("<h6><strong>Precio: </strong>" + tema.price + "</h6>");
+    $contenedorTema.append("<h6><strong>Moneda: </strong><span class='willSearch'>" + tema.curency_id + "</span></h6>");
+    $contenedorTema.append("<h6>Estado: " + tema.condition + "</h6>");
+    $contenedorTema.append("<img src=' " + tema.thumbnail + " '>");
+    $(newSection).append($contenedorTema);
+
+  };
 });
-
-function getData() {
-  $.ajax({
-    url: `https://api.mercadolibre.com/sites/MLA/search?q=${searchedForText}`,
-    contentType: 'application/json',
-    method: 'GET',
-    success: function(response) {
-      console.log(response.results);
-      var result = response.results;
-
-      $.each(result, function(index, obj) {
-        $('.content').append(`<div class="card col-4">
-        <img class="card-img-top" src="${result[index].thumbnail}" alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text">${result[index].title}</p>
-          <p class="card-text">S/.${result[index].price}</p>
-        </div>
-      </div>`);
-        console.log(result[index].title);
-      });
-    },
-    fail: function(request) {
-      if (request) {
-        alert(request.message);
-      }
-    }
-  });
-}
