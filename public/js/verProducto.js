@@ -1,7 +1,6 @@
 
-$(document).ready(function() {
+$(document).ready(function () {
   var $amountProduct = $('.amount-product');
-  console.log($amountProduct.text());
   var productId = getParameterByName('product_id');
 
 
@@ -21,7 +20,7 @@ $(document).ready(function() {
       } else {
         var newVal = oldValue + 1;
       }
-      
+
       spinner.find("input").val(newVal);
       spinner.find("input").trigger("change");
     });
@@ -38,26 +37,35 @@ $(document).ready(function() {
     });
   });
 
-  // API Google Pay
-  $('.to-pay').on('click', function () {
-    console.log(this);
-      const payMethod = [
-        {
-          supportedMethods: ['visa', 'pay-pal','mastercard']
-        }
-      ];
-  
-      const payDetail = {
-        total: {
-          label: 'total de los productos',
-          amount : {
-            currency: 'PEN',
-            value: `${$amountProduct.text()*$('.quantity').find('input').val()}`
-          }
-        }
-      };
-      const payRequest = new PaymentRequest(payMethod, payDetail);
-      payRequest.show();
+
+  $('.add-cart').on('click', function () {
+    console.log($amountProduct.text());
+    // console.log($amountProduct.text() * $('.quantity').find('input').val());
+    console.log($('.quantity').find('input').val());
+    console.log($(this));
+    localStorage.setItem('quantity-item', $('.quantity').find('input').val());
+    $('#cart-quatity').text($('.quantity').find('input').val());
   });
+  // // API Google Pay
+  // $('.to-pay').on('click', function () {
+  //   console.log(this);
+  //     const payMethod = [
+  //       {
+  //         supportedMethods: ['visa', 'pay-pal','mastercard']
+  //       }
+  //     ];
+
+  //     const payDetail = {
+  //       total: {
+  //         label: 'total de los productos',
+  //         amount : {
+  //           currency: 'PEN',
+  //           value: `${$amountProduct.text()*$('.quantity').find('input').val()}`
+  //         }
+  //       }
+  //     };
+  //     const payRequest = new PaymentRequest(payMethod, payDetail);
+  //     payRequest.show();
+  // });
 
 });
