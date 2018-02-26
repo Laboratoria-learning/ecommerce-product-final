@@ -1,25 +1,30 @@
-# E-commerce
+## E-commerce
 
 * **Track:** _Especialización Front-end_
 * **Curso:** _CONSTRUYE UNA SINGLE PAGE APP (SPA) MULTI-USUARIO CONSUMIENDO DATA REMOTA_
 * **Unidad:** _Producto final_
 
-***
+E-commerce es una app web Tienda online, creado bajo los principios de SPA (Single page aplication).
+con el fin de brindar a los usuarios servicios de venta online de una manera mas segura y rapida.
 
-## Flujo de trabajo
+## Trabajo colaborativo 
 
-1. Debes realizar un [**fork**](https://gist.github.com/ivandevp/1de47ae69a5e139a6622d78c882e1f74)
-   de este repositorio.
++ Valeria valles
 
-2. Luego deberás **clonar** tu fork en tu máquina. Recuerda que el comando a usar
-   es `git clone` y su estructura normalmente se ve así:
++ Yanina Mercado 
 
-   ```bash
-   git clone https://github.com/<nombre-de-usuario>/freelancer.git
-   ```
+Para este producto se implentaron las siguientes herramientas:
 
-3. Cuando hayas terminado tu producto, envía un Pull Request a este repositorio
-   (puedes solicitar apoyo de tus profes para este paso).
+> Uso de la Api Mercado libre.
 
-> Nota: No olvides que es una buena práctica describir tu proyecto en este
-> archivo `README.md` y también desplegar tu web a Github Pages :smiley:.
+> Uso de la Api Payple (medio de pago).
+
+> html
+
+> CSS/estilos
+
+> Framework Bootstrap
+
+> Libreria de javascript Jquery
+
+
