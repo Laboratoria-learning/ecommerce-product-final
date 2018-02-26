@@ -17,6 +17,15 @@ function getFetch() {
   for (let i = 1; i < 60; i++) {
 
     inputSearch.addEventListener('keydown', function () {
+      $('#base').empty();
+      $('#sombras').empty();
+      $('#corrector').empty();
+      $('#delineador').empty();
+      $('#esmalte').empty();
+      $('#labial').empty();
+      $('#rimel').empty();
+      $('#rubor').empty();
+      $('#maquillaje').empty();
       let search = inputSearch.value;
       var container = document.getElementById('section');
       container.innerHTML = '';
@@ -52,6 +61,14 @@ function getFetch() {
     })
 
     boxMaquillaje.addEventListener('click', function () {
+      $('#base').empty();
+      $('#sombras').empty();
+      $('#corrector').empty();
+      $('#delineador').empty();
+      $('#esmalte').empty();
+      $('#labial').empty();
+      $('#rimel').empty();
+      $('#rubor').empty();
       parameter = 'maquillaje';
       var container = document.getElementById('maquillaje');
       const url = `https://api.mercadolibre.com/sites/MPE/search?condition=new&q=${parameter}`;
@@ -83,6 +100,14 @@ function getFetch() {
     })
 
     boxSombras.addEventListener('click', function () {
+      $('#maquillaje').empty();
+      $('#base').empty();
+      $('#corrector').empty();
+      $('#delineador').empty();
+      $('#esmalte').empty();
+      $('#labial').empty();
+      $('#rimel').empty();
+      $('#rubor').empty();
       parameter = 'sombras';
       var container = document.getElementById('sombras');
       const url = `https://api.mercadolibre.com/sites/MPE/search?condition=MPE118865&q=${parameter}`;
@@ -116,6 +141,14 @@ function getFetch() {
     })
 
     boxBase.addEventListener('click', function () {
+      $('#maquillaje').empty();
+      $('#sombras').empty();
+      $('#corrector').empty();
+      $('#delineador').empty();
+      $('#esmalte').empty();
+      $('#labial').empty();
+      $('#rimel').empty();
+      $('#rubor').empty();
       parameter = 'base';
       var container = document.getElementById('base');
       const url = `https://api.mercadolibre.com/sites/MPE/search?condition=MPE121463&q=${parameter}`;
@@ -141,6 +174,14 @@ function getFetch() {
     })
 
     boxCorrector.addEventListener('click', function () {
+      $('#base').empty();
+      $('#sombras').empty();
+      $('#maquillaje').empty();
+      $('#delineador').empty();
+      $('#esmalte').empty();
+      $('#labial').empty();
+      $('#rimel').empty();
+      $('#rubor').empty();
       parameter = 'corrector';
       var container = document.getElementById('corrector');
       const url = `https://api.mercadolibre.com/sites/MPE/search?condition=MPE122628&q=${parameter}`;
@@ -166,6 +207,14 @@ function getFetch() {
     })
 
     boxDelineador.addEventListener('click', function () {
+      $('#base').empty();
+      $('#sombras').empty();
+      $('#maquillaje').empty();
+      $('#corrector').empty();
+      $('#esmalte').empty();
+      $('#labial').empty();
+      $('#rimel').empty();
+      $('#rubor').empty();
       parameter = 'delineador';
       var container = document.getElementById('delineador');
       const url = `https://api.mercadolibre.com/sites/MPE/search?condition=MPE118869&q=${parameter}`;
@@ -191,6 +240,14 @@ function getFetch() {
     })
 
     boxEsmalte.addEventListener('click', function () {
+      $('#base').empty();
+      $('#sombras').empty();
+      $('#maquillaje').empty();
+      $('#corrector').empty();
+      $('#delineador').empty();
+      $('#labial').empty();
+      $('#rimel').empty();
+      $('#rubor').empty();
       parameter = 'esmalte';
       var container = document.getElementById('esmalte');
       const url = `https://api.mercadolibre.com/sites/MPE/search?condition=MPE121462&q=${parameter}`;
@@ -216,6 +273,14 @@ function getFetch() {
     })
 
     boxLabial.addEventListener('click', function () {
+      $('#base').empty();
+      $('#sombras').empty();
+      $('#maquillaje').empty();
+      $('#corrector').empty();
+      $('#delineador').empty();
+      $('#esmalte').empty();
+      $('#rimel').empty();
+      $('#rubor').empty();
       parameter = 'labial';
       var container = document.getElementById('labial');
       const url = `https://api.mercadolibre.com/sites/MPE/search?condition=MPE118867&q=${parameter}`;
@@ -241,6 +306,14 @@ function getFetch() {
     })
 
     boxRimel.addEventListener('click', function () {
+      $('#base').empty();
+      $('#sombras').empty();
+      $('#maquillaje').empty();
+      $('#corrector').empty();
+      $('#delineador').empty();
+      $('#esmalte').empty();
+      $('#labial').empty();
+      $('#rubor').empty();
       parameter = 'rimel';
       var container = document.getElementById('rimel');
       const url = `https://api.mercadolibre.com/sites/MPE/search?condition=MPE118868&q=${parameter}`;
@@ -266,6 +339,14 @@ function getFetch() {
     })
 
     boxRubor.addEventListener('click', function () {
+      $('#base').empty();
+      $('#sombras').empty();
+      $('#maquillaje').empty();
+      $('#corrector').empty();
+      $('#delineador').empty();
+      $('#labial').empty();
+      $('#esmalte').empty();
+      $('#rimel').empty();
       parameter = 'rubor';
       var container = document.getElementById('rubor');
       const url = `https://api.mercadolibre.com/sites/MPE/search?condition=MPE118866&q=${parameter}`;
