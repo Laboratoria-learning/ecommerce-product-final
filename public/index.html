@@ -12,6 +12,7 @@
 </head>
 
 <body>
+	<!-- header-->
 	<header >
 	<div class="compact col-sm-12 col-md-12">	
 		<div><h2>TIENDA ONLINE</h2></div>
@@ -23,11 +24,66 @@
             </div>
 		</div>
 	</div>
-	
-	
-	
-	
+</header>
+	<!-- Main -->
+<main class="main-content">
+	<div id="paypal-button"></div>
+	<div class="all-products page">
+		<div class="filters">
+			<form>
+				<div class="filter-criteria">
+					<span>Tecnología</span>
+					<label><input type="button" name="tecnologia" value="laptops"></label>
+					<label><input type="button" name="tecnologia" value="ipods"></label>
+					<label><input type="button" name="tecnologia" value="celulares"></label>
+					<label><input type="button" name="tecnologia" value="tablets"></label>
+				</div>
+				<button>Limpiar filtros</button>
+			</form>
+		</div>
+		<ul class="products-list">
+			<script id="products-template" type="x-handlebars-template">​
+				{{#each this}}
+					<li data-index="{{id}}">
+						<a href="#" class="product-photo"><img src="{{thumbnail}}" class="img-responsive" height="130" alt="{{name}}"/></a>
+						<h2><a href="#"> {{name}} </a></h2>
+						<ul class="product-description">
+							<li><span>Manufacturer: </span>{{specs.manufacturer}}</li>
+							<li><span>Ubicación: </span>{{address.city_name}}</li>
+							<li><span>Cantidad disponible: </span>{{available_quantity}}</li>
+						</ul>
+						<button>Ver</button>
+						<p class="product-price">S/.{{price}}</p>
+						<div class="highlight"></div>
+					</li>
+				{{/each}}
+			</script>
+		</ul>
+	</div>
+	<div class="single-product page">
+			
+		<div class="overlay"></div>
+		<div id="paypal-button"></div>
+		<div class="preview-large">
+			<div></div>
+			<h3>Single product view</h3>
+			<img src=""/ class="img-responsive">
+			<p></p>
+		<!--	<button type="submit">hola</button>-->
+			
+			<span class="close">×</span>
+		</div>
+	</div>
+	<div class="error page">
+		<h3>Sorry, something went wrong :(</h3>
+	</div>
+</main>
 
 
+<script src="vendors/js/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<script src="js/paypal.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
