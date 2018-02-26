@@ -1,15 +1,11 @@
 $(document).ready(function() {
-  console.log($('#subtotal').find('span'));
-  console.log($('#igv').find('span'));
-  console.log($('#total-amount').find('span'));
   let eachQuantityBox = $('.row-product');
-
+  let totalPrice = $('.total-price');
   
-  $('#subtotal').find('span').text(Math.floor($('.total-price').find('span').text()));
+  // Añadiendo al Dom los resultados de una unidad de productos por default
+  $('#subtotal').find('span').text(Math.floor($(totalPrice[0]).find('span').text()) + Math.floor($(totalPrice[1]).find('span').text()));
   $('#igv').find('span').text(Math.floor($('#subtotal').find('span').text() - (Math.floor($('#subtotal').find('span').text()) / 1.18)));
   $('#total-amount').find('span').text(Math.floor($('#subtotal').find('span').text()) + Math.floor($('#igv').find('span').text()));
-
-
 
   // obteniendo lo guardado en el localStorage
   $('#quantity-selected').text(localStorage.getItem('quantity-item'));
@@ -22,7 +18,6 @@ $(document).ready(function() {
 
     $inputChange.on('change', function() {
       let $hola = $(val).find('.total-price span').text(Math.floor($unitPriceProduct * $(this).val()));
-      let totalPrice = $('.total-price');
   
       $('#subtotal').find('span').text(Math.floor($(totalPrice[0]).find('span').text()) + Math.floor($(totalPrice[1]).find('span').text()));
       // console.log($('#subtotal').find('span').text());
