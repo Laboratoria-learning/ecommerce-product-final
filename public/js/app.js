@@ -1,16 +1,26 @@
 $(document).ready(function() {
   $.ajax({
-    url: 'https://examen-laboratoria-sprint-5.herokuapp.com/topics',
-    method: 'GET',
-    contentType: 'application/json',
-    crossOrigin: true,
-    success: function(response) {
-      console.log(response);
-      $.each(response, function(i, data) {
-        let output = `<div class="row post"><div class="col s6 l6"><a href="verTopic.html?topic_id=${data.id}">${data.content}</a></div><div class="col s3 l3"><span>Por: </span><strong>${data.author_name}</strong></div><div class="col s3 l3"><a class="waves-effect waves-light btn indigo lighten-5 black-text text-black">${data.responses_count}<span> Respuestas </span> </a></div></div>`;
-        $('.foro').append(output); 
+    url: 'https://api.mercadolibre.com/categories/MPE1430', // cambiar el
+    success: function(data) {
+      let categories = data.children_categories;
+      console.log(categories);
+      categories.forEach(element => {
+        let template = `<div data-id="${element.id}"  class="card" style="width: 18rem;">
+       <img class="card-img-top" src="" alt="Card image cap">
+       <div class="card-body">
+         <p class="card-text">${element.name}</p>
+       </div>
+     </div>`;
+        $('#container').append(template);
       });
-    },
-    fail: function(request) { }
+    }
   });
+
+
+  /*  $.ajax({
+    url: 'https://api.mercadolibre.com/sites/MLA/search?category=MLA5726', // cambiar el
+    success: function(data){
+      console.log(data.results)
+    }
+  }); */
 });
