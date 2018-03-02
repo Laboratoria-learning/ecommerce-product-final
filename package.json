@@ -1,0 +1,23 @@
+{
+  "name": "ecommerse-product-final",
+  "version": "1.0.0",
+  "description": "Tienda comercial en linea",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Claudiagari/ecommerse-product-final.git"
+  },
+  "author": "Carla Centeno Claudia Garibotto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Claudiagari/ecommerse-product-final/issues"
+  },
+  "homepage": "https://github.com/Claudiagari/ecommerse-product-final#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
