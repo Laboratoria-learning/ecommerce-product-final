@@ -28,7 +28,7 @@ $('document').ready(function() {
       });
     console.log(data);
   }
-  
+
   function addNews(data) {
     data.results.forEach(element => {
       $('#container-search').append(` <div class="card m-2" style="width: 18rem;">
@@ -48,4 +48,26 @@ $('document').ready(function() {
     console.log('INSIDE displayErrors!');
     console.log(err);
   }
+  
+  // configuración inicial del carrito 
+  paypal.minicart.render({
+    strings: {
+      button: 'Pagar'
+      , buttonAlt: 'Total'
+      , subtotal: 'Total:'
+      , empty: 'No hay productos en el carrito'
+    }
+  });
+
+  // Eventos para agregar productos al carrito
+  $('.car').click(function(event) {
+    event.stopPropagation();
+    paypal.minicart.cart.add({
+      // Cuenta paypal para recibir el dinero
+      business: 'aycuevam@unc.edu.pe', 
+      item_name: $(this).attr('titulo'),
+      amount: $(this).attr('precio'),
+      currency_code: 'PEN',
+    });
+  });
 });
