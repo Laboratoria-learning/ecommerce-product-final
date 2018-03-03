@@ -29,7 +29,6 @@ $(document).ready(function() {// 2DCF9C
     let categories = ctx.path;
     let name = categories.substr(1);
     console.log(name);
-
     $.ajax({
       url: `https://api.mercadolibre.com/sites/MPE/search?condition=new&q=${name}`, // cambiar el
       success: function(data) {
@@ -58,23 +57,29 @@ $(document).ready(function() {// 2DCF9C
         <div class="text-center"><img class="img-r" src="${element.thumbnail}" alt="Card image cap"></div>
         <div class="card-body text-center">
           <h5 class="card-title">${element.title}</h5>
-          <p class="card-text">Precio : ${element.price}</p>
-          <a href="" class="btn btn-primary " id="${element.id}" data-toggle="modal" data-target="#exampleModal">Buy</a>
+          <p class="card-text">Precio : S/. ${element.price}</p>
+          <a href="#" class="btn btn-primary product" id="${element.id}" price="${element.price}" title="${element.title}" role="button">Buy</a>
         </div>
          </div>
       </div>`;
     $('.row').append(template);
-    $.ajax({
-      url: 'https://api.mercadolibre.com/sites/MPE/search?category=MPE1144', // cambiar el
-      success: function(data) {
-        let productResults = data.results;
-        productResults.forEach((element, index) => {
-          template(element);
-        });
+    paypal.minicart.render({
+      strings: {
+        button: 'Pay'
+        , buttonAlt: 'Total'
+        , subtotal: 'Total:'
+        , empty: 'You have no items in your bag'
       }
-    }); 
+    });
+    $('#' + element.id + '').click(function(e) {
+      paypal.minicart.cart.add({
+        business: 'gamestore@gmail.com', // Cuenta paypal para recibir el dinero
+        item_name: $(this).attr('title'),
+        amount: $(this).attr('price'),
+        currency_code: 'PEN',
+   
+      });
+    });
   }
   home();
-
-
 });
