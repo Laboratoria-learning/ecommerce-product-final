@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
-  <title>Ecomerse</title>
+  <title>e-comerse</title>
   <link rel="shortcut icon" href="assets/img/icon.png">
 </head>
 <body>
@@ -16,23 +16,22 @@
       <div class="row">
         <div class="col-xs-12 col-md-12 none-padding">
           <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
-            <a class="navbar-brand" href="">
+            <a class="navbar-brand" href="#">
               <img src="assets/img/mercadoLibre.png" width="100" height="60" class="d-inline-block align-top" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
               aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Inicio
+                  <a class="nav-link" href="#/">Inicio
                     <span class="sr-only">(current)</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Tus Compras</a>
+                  <a class="nav-link" href="#/search-view">Tus Compras</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -54,7 +53,7 @@
               </ul>
               <form class="form-inline my-2 my-lg-0">
                 <input id="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button id="btn-search" class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                <button id="btn-search" class="btn btn-outline-light my-2 my-sm-0" href="" type="submit">Search</button>
               </form>
             </div>
           </nav>
@@ -94,149 +93,15 @@
           </div>
         </div>
     </section>
-    <section>
-      <!-- Contenedor de los resultados de busqueda -->
-    <div id="container-search" class="d-flex flex-wrap">
-    </div>
-    </section>
-    <section>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#">
-                <img class="card-img-top" src="http://placehold.it/700x400" alt="">
-              </a>
-              <div class="card-body">
-                <a href="#" class="btn btn-primary btn-block">Go somewhere</a>
-                <h4 class="card-title">
-                  <a href="#">Item One</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#">
-                <img class="card-img-top" src="http://placehold.it/700x400" alt="">
-              </a>
-              <div class="card-body">
-                <a href="#" class="btn btn-primary btn-block">Go somewhere</a>
-                <h4 class="card-title">
-                  <a href="#">Item One</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#">
-                <img class="card-img-top" src="http://placehold.it/700x400" alt="">
-              </a>
-              <div class="card-body">
-                <a href="#" class="btn btn-primary btn-block">Go somewhere</a>
-                <h4 class="card-title">
-                  <a href="#">Item One</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
+    <div id="vista"></div>
   </main>
   <footer class="mainfooter" role="contentinfo">
-    <div class="footer-middle">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <!--Column1-->
-          <div class="footer-pad">
-            <h4>Address</h4>
-            <address>
-                  <ul class="list-unstyled">
-                    <li>
-                      City Hall<br>
-                      212  Street<br>
-                      Lawoma<br>
-                      735<br>
-                    </li>
-                    <li>
-                      Phone: 0
-                    </li>
-                  </ul>
-                </address>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <!--Column1-->
-          <div class="footer-pad">
-            <h4>Popular Services</h4>
-            <ul class="list-unstyled">
-              <li><a href="#"></a></li>
-              <li><a href="#">Payment Center</a></li>
-              <li><a href="#">Contact Directory</a></li>
-              <li><a href="#">Forms</a></li>
-              <li><a href="#">News and Updates</a></li>
-              <li><a href="#">FAQs</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <!--Column1-->
-          <div class="footer-pad">
-            <h4>Website Information</h4>
-            <ul class="list-unstyled">
-              <li><a href="#">Website Tutorial</a></li>
-              <li><a href="#">Accessibility</a></li>
-              <li><a href="#">Disclaimer</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">FAQs</a></li>
-              <li><a href="#">Webmaster</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <!--Column1-->
-          <div class="footer-pad">
-            <h4>Popular Departments</h4>
-            <ul class="list-unstyled">
-              <li><a href="#">Parks and Recreation</a></li>
-              <li><a href="#">Public Works</a></li>
-              <li><a href="#">Police Department</a></li>
-              <li><a href="#">Fire</a></li>
-              <li><a href="#">Mayor and City Council</a></li>
-              <li>
-                <a href="#"></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
     <div class="footer-bottom">
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-md-12">
             <!--Footer Bottom-->
-            <p class="text-xs-center text-md-center">&copy; Copyright 2016 - City of USA.  All rights reserved.</p>
+            <p class="text-xs-center text-md-center">&copy; Copyright 2018 - Araceli y Vanessa</p>
           </div>
         </div>
       </div>
@@ -248,6 +113,9 @@
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+    <script src="./js/libreria.js"></script>
+    <script src="js/rutas.js"></script>
+    <script src="js/controladores/search.js"></script>
     <script src="js/minicart.js"></script>
     <script src="js/app.js"></script>
 </body>

@@ -1,17 +1,32 @@
 $('document').ready(function() {
-  const $btn = $('#btn-search');
+  const $btnSearch = $('#btn-search');
   let input = $('#search');
-  $btn.click(function(event) {
+
+  function getDefault(){
+    valorBuscado = 'tecnologia';
+    const url = `https://api.mercadolibre.com/sites/MPE/search?condition=new&q=${valorBuscado}`;
+    fetch(url)
+      .then(handleErrors)
+      .then(parseJSON)
+      .then(defaultData)
+      .catch(displayErrors);    
+  }
+
+  getDefault();
+
+  $btnSearch.click(function(event) {
+    $('#ocultar').addClass('display-none');
     event.preventDefault();
     $('#contente-list').html('');
     $('#contente-search').html('');
     $('#container-search').html('');
-    const url = `https://api.mercadolibre.com/sites/MPE/search?condition=new&q=${input.val()}`;
+    valorBuscado = input.val();
+    const url = `https://api.mercadolibre.com/sites/MPE/search?condition=new&q=${valorBuscado}`;
     fetch(url)
       .then(handleErrors)
       .then(parseJSON)
-      .then(addNews)
-      .catch(displayErrors);
+      .then(searchData)
+      .catch(displayErrors);    
   });
   
   function handleErrors(res) {
@@ -28,46 +43,75 @@ $('document').ready(function() {
       });
     console.log(data);
   }
-
-  function addNews(data) {
+  
+  function searchData(data) {
+    console.log(data);
     data.results.forEach(element => {
-      $('#container-search').append(` <div class="card m-2" style="width: 18rem;">
-      <img class="card-img-top" src="${element.thumbnail}" alt="Card image cap">
-      <div class="card-body">
-      <h5 class="card-title">S/. ${element.price}</h5>
-      <h6 class="card-title">${element.listing_type_id}</h6>
-      <p class="card-text">${element.title}.</p>
-      <input class="car btn btn-primary" type="button" value="AÑADIR AL CARRITO" price="${element.price}" title="${element.listing_type_id}" />
+      $('#container-search').append(`<div class="col-lg-2 col-md-4 mb-2">
+      <div class="card h-100">
+        <a href="#">
+          <img class="card-img-top" src="${element.thumbnail}" alt="">
+        </a>
+        <div class="card-body">
+          <a href="#" class="btn btn-primary btn-block producto" precio = "${element.price}" titulo = ${element.title} >Agregar a Carrito</a>
+          <h4 class="card-title">
+            <a href="${element.permalink}" class="title-card">${element.title}</a>
+          </h4>
+          <h5>${ 'S/. ' + element.price}</h5>
+          <p class="card-text">Cantidad Vendida : ${element.sold_quantity} </p>
+        </div>
       </div>
-      </div>`);
+    </div>`);
     });
     input.val('');
+    addPaypal();
   }
-  
+
+  function defaultData(data) {
+    console.log(data);
+    data.results.forEach(element => {
+      $('#insertar').append(`<div class="col-lg-2 col-md-4 mb-2">
+      <div class="card h-100">
+        <a href="#">
+          <img class="card-img-top" src="${element.thumbnail}" alt="">
+        </a>
+        <div class="card-body">
+        <a href="#" class="btn btn-primary btn-block producto" precio = "${element.price}" titulo = ${element.title} >Agregar a Carrito</a>
+          <h4 class="card-title">
+            <a href="${element.permalink}" class="title-card">${element.title}</a>
+          </h4>
+          <h5>${ 'S/. ' + element.price}</h5>
+          <p class="card-text">Cantidad Vendida : ${element.sold_quantity} </p>
+        </div>
+      </div>
+    </div>`);
+    });
+    addPaypal();
+  }
+
   function displayErrors(err) {
     console.log('INSIDE displayErrors!');
     console.log(err);
   }
-  
-  // configuración inicial del carrito 
-  paypal.minicart.render({
-    strings: {
-      button: 'Pagar'
-      , buttonAlt: 'Total'
-      , subtotal: 'Total:'
-      , empty: 'No hay productos en el carrito'
-    }
-  });
 
-  // Eventos para agregar productos al carrito
-  $('.car').click(function(event) {
-    event.stopPropagation();
-    paypal.minicart.cart.add({
-      // Cuenta paypal para recibir el dinero
-      business: 'aycuevam@unc.edu.pe', 
-      item_name: $(this).attr('titulo'),
-      amount: $(this).attr('precio'),
-      currency_code: 'PEN',
+  function addPaypal() {
+    paypal.minicart.render({
+      strings: {
+        button: 'Pagar',
+        buttonAlt: 'Total',
+        subtotal: 'Total:',
+        empty: 'No hay productos en el carrito'
+      }
     });
-  });
+    // Eventos para agregar productos al carrito
+    $('.producto').click(function(event) {
+      event.stopPropagation();
+      paypal.minicart.cart.add({
+        business: 'vanesamendozainoyan@gmail.com', // Cuenta paypal para recibir el dinero
+        item_name: $(this).attr('titulo'),
+        amount: $(this).attr('precio'),
+        currency_code: 'PEN',
+       });
+    });
+  }
 });

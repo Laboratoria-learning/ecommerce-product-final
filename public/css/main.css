@@ -29,3 +29,12 @@ footer a:hover{
   padding-top: 2em;
   color: white;
 }
+
+.display-none{
+  display: none;
+}
+
+.title-card{
+  font-size: 1rem;
+  color: #004085;
+}
