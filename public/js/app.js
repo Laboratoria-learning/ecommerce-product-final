@@ -1,6 +1,5 @@
 $(document).ready(function() {// 2DCF9C
   $('.carousel').carousel();
-
   page('/Disney Infinity', products);
   page('/Flippers y Arcade', products);
   page('/Nintendo', products);
@@ -12,7 +11,6 @@ $(document).ready(function() {// 2DCF9C
   page('/Otras Marcas', products);
   page('/public/index.html', home);
   page();
-
   $.ajax({
     url: 'https://api.mercadolibre.com/categories/MLA1144', // cambiar el
     success: function(data) {
@@ -26,7 +24,6 @@ $(document).ready(function() {// 2DCF9C
       });
     }
   });
- 
   function products(ctx) {
     $('.row').html('');
     let categories = ctx.path;
@@ -55,23 +52,29 @@ $(document).ready(function() {// 2DCF9C
       }
     }); 
   }
- 
-
   function template(element) {
     let template = `<div class="col-lg-3">
         <div class="card h3">
         <div class="text-center"><img class="img-r" src="${element.thumbnail}" alt="Card image cap"></div>
-        
         <div class="card-body text-center">
           <h5 class="card-title">${element.title}</h5>
           <p class="card-text">Precio : ${element.price}</p>
-          <a href="#" class="btn btn-primary">Buy</a>
+          <a href="" class="btn btn-primary " id="${element.id}" data-toggle="modal" data-target="#exampleModal">Buy</a>
         </div>
-      
-        </div>
+         </div>
       </div>`;
     $('.row').append(template);
+    $.ajax({
+      url: 'https://api.mercadolibre.com/sites/MPE/search?category=MPE1144', // cambiar el
+      success: function(data) {
+        let productResults = data.results;
+        productResults.forEach((element, index) => {
+          template(element);
+        });
+      }
+    }); 
   }
-
   home();
+
+
 });
