@@ -7,4 +7,34 @@
   padding-right: 0px;
   padding-left: 0px;
 }
+footer{
+  color: white;
+}
+footer a{
+  color: #bfffff;
+}
+footer a:hover{
+  color: white;
+}
 
+.footer-bottom{
+  background: #3d6277;
+  padding: 2em;
+}
+.footer-top{
+  background: #2d4958;  
+}
+.footer-middle{
+   background: #3d6277;
+  padding-top: 2em;
+  color: white;
+}
+
+.display-none{
+  display: none;
+}
+
+.title-card{
+  font-size: 1rem;
+  color: #004085;
+}

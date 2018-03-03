@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,17 +7,15 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
-
-  <title>Ecomerse</title>
+  <title>e-comerse</title>
   <link rel="shortcut icon" href="assets/img/icon.png">
 </head>
-
 <body>
   <header>
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12 col-md-12 none-padding">
-          <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+          <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
             <a class="navbar-brand" href="">
               <img src="assets/img/mercadoLibre.png" width="100" height="60" class="d-inline-block align-top" alt="">
             </a>
@@ -42,8 +39,10 @@
                     Categorias
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Hogar</a>
+                    <a class="dropdown-item" href="#">Deportes</a>
+                    <a class="dropdown-item" href="#">Salud</a>
+                    <a class="dropdown-item" href="#">Herramientas</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Something else here</a>
                   </div>
@@ -53,8 +52,8 @@
                 </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <input id="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button id="btn-search" class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
               </form>
             </div>
           </nav>
@@ -95,75 +94,40 @@
         </div>
     </section>
     <section>
+      <!-- Contenedor de los resultados de busqueda -->
+    <div id="container-search" class="d-flex flex-wrap">
+    </div>
+    </section>
+    <section id="ocultar">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#">
-                <img class="card-img-top" src="http://placehold.it/700x400" alt="">
-              </a>
-              <div class="card-body">
-                <a href="#" class="btn btn-primary btn-block">Go somewhere</a>
-                <h4 class="card-title">
-                  <a href="#">Item One</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#">
-                <img class="card-img-top" src="http://placehold.it/700x400" alt="">
-              </a>
-              <div class="card-body">
-                <a href="#" class="btn btn-primary btn-block">Go somewhere</a>
-                <h4 class="card-title">
-                  <a href="#">Item One</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#">
-                <img class="card-img-top" src="http://placehold.it/700x400" alt="">
-              </a>
-              <div class="card-body">
-                <a href="#" class="btn btn-primary btn-block">Go somewhere</a>
-                <h4 class="card-title">
-                  <a href="#">Item One</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-
+        <div class="row" id="insertar">
         </div>
       </div>
     </section>
+    <section>
+      <div class="row" id="section-items">
+      </div>
+    </section>
   </main>
+  <footer class="mainfooter" role="contentinfo">
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-12">
+            <!--Footer Bottom-->
+            <p class="text-xs-center text-md-center">&copy; Copyright 2018 - Araceli y Vanessa</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-  <script src="js/app.js"></script>
-
+    <script src="js/minicart.js"></script>
+    <script src="js/app.js"></script>
 </body>
-
 </html>
