@@ -1,25 +1,40 @@
 # E-commerce
 
-* **Track:** _Especialización Front-end_
-* **Curso:** _CONSTRUYE UNA SINGLE PAGE APP (SPA) MULTI-USUARIO CONSUMIENDO DATA REMOTA_
-* **Unidad:** _Producto final_
+   Ecommerce es una aplicación en la cual, la pone  en practica la construción una SPA(SINGLE PAGE APLICATION), consumiendo recursos o data remota de la API(Interfaz de Programación de Aplicaciones) de mercado libre.
+
+  ![mercado libre](https://user-images.githubusercontent.com/32307611/36940810-b55ca2d8-1f19-11e8-9976-17d82e71180f.PNG)
 
 ***
 
 ## Flujo de trabajo
 
-1. Debes realizar un [**fork**](https://gist.github.com/ivandevp/1de47ae69a5e139a6622d78c882e1f74)
-   de este repositorio.
+- Al inciar la aplicación tenemos la siguiente vista:
 
-2. Luego deberás **clonar** tu fork en tu máquina. Recuerda que el comando a usar
-   es `git clone` y su estructura normalmente se ve así:
+  ![mercado libre](https://user-images.githubusercontent.com/32307611/36940810-b55ca2d8-1f19-11e8-9976-17d82e71180f.PNG)
 
-   ```bash
-   git clone https://github.com/<nombre-de-usuario>/freelancer.git
-   ```
+- Para Hacer Uso de la API  nos dirimos a Compras, luego se desplegará el buscador, ingresamos el articulo que estamos buscando y nos aparecerá los resultados de la busqueda.
 
-3. Cuando hayas terminado tu producto, envía un Pull Request a este repositorio
-   (puedes solicitar apoyo de tus profes para este paso).
+![mercado libre-2](https://user-images.githubusercontent.com/32307611/36940947-b409cb6e-1f1d-11e8-8df1-5a55cb489de8.PNG)
 
-> Nota: No olvides que es una buena práctica describir tu proyecto en este
-> archivo `README.md` y también desplegar tu web a Github Pages :smiley:.
+![mercado libre-3](https://user-images.githubusercontent.com/32307611/36940951-c693b484-1f1d-11e8-9b28-95a738ab7baa.PNG)
+
+- Luego presionamos agregar a carrito, y se desplegará la pasarela de pago de paypal, la cual va seguir el proceso de compra.
+
+![mercado libre-4](https://user-images.githubusercontent.com/32307611/36940958-dcd92fe4-1f1d-11e8-979f-a2179c8d025a.PNG)
+
+![paypal](https://user-images.githubusercontent.com/32307611/36940963-e8642616-1f1d-11e8-9dfb-6b7215287c7c.PNG)
+
+## Herramientas Utilizadas
+
+- HTML, para la presentación del documento.
+- CSS, para los estilos del documento.
+- Jquery, para la manipulación de los elementos del documento.
+- BootStrap, para el maquetado de del documento.
+- API de Mercado Libre, para mostrar los productos.
+- Librería Minicart para la pasarela de Pago con Paypal.
+- MVC(Modelo Vista Controlado)- Modelo para separar la data, la vista para la interfaz de usuario, y el controlador para separar la lógica de la aplicación.
+
+## Colaboradoras
+
+- Araceli Cueva
+- Vannesa Mendoza

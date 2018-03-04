@@ -47,10 +47,10 @@ $('document').ready(function() {
   function searchData(data) {
     console.log(data);
     data.results.forEach(element => {
-      $('#container-search').append(`<div class="col-lg-2 col-md-4 mb-2">
+      $('#container-search').append(`<div class="col-lg-3 col-md-4 mb-4">
       <div class="card h-100">
         <a href="#">
-          <img class="card-img-top" src="${element.thumbnail}" alt="">
+          <img class="card-img-top padding-40" src="${element.thumbnail}" alt="">
         </a>
         <div class="card-body">
           <a href="#" class="btn btn-primary btn-block producto" precio = "${element.price}" titulo = ${element.title} >Agregar a Carrito</a>
@@ -70,10 +70,10 @@ $('document').ready(function() {
   function defaultData(data) {
     console.log(data);
     data.results.forEach(element => {
-      $('#insertar').append(`<div class="col-lg-2 col-md-4 mb-2">
+      $('#insertar').append(`<div class="col-lg-3 col-md-4 mb-4">
       <div class="card h-100">
         <a href="#">
-          <img class="card-img-top" src="${element.thumbnail}" alt="">
+          <img class="card-img-top padding-40" src="${element.thumbnail}" alt="">
         </a>
         <div class="card-body">
         <a href="#" class="btn btn-primary btn-block producto" precio = "${element.price}" titulo = ${element.title} >Agregar a Carrito</a>
@@ -107,11 +107,15 @@ $('document').ready(function() {
     $('.producto').click(function(event) {
       event.stopPropagation();
       paypal.minicart.cart.add({
-        business: 'vanesamendozainoyan@gmail.com', // Cuenta paypal para recibir el dinero
+        business: 'aycuevam@gmail.com', // Cuenta paypal para recibir el dinero
         item_name: $(this).attr('titulo'),
         amount: $(this).attr('precio'),
         currency_code: 'PEN',
        });
     });
   }
+
+  $('#comprar').click(function(){
+    $('#buscar').removeClass('form-search');
+  });
 });

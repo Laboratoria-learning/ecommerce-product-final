@@ -38,3 +38,19 @@ footer a:hover{
   font-size: 1rem;
   color: #004085;
 }
+
+.form-search{
+  display: none;
+}
+
+.footer{
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  width:100%;
+}
+
+
+.padding-40{
+  padding: 40px;
+}
