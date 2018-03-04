@@ -1,0 +1,41 @@
+/* Global */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for navbar */
+
+/* Style for main */
+
+.display {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.padding {
+  padding: 0;
+}
+
+.margin {
+  margin: 3.3rem;
+}
+
+[alt="title"] {
+  width: 8rem;
+  height: 8rem;
+}
+
+.selection:hover, .selection:active {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+}
