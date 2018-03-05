@@ -1,0 +1,9 @@
+#categories {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    #categories, #shopping-cart {
+        display: block;
+    }
+}
