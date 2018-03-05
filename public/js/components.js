@@ -2,7 +2,7 @@ function laptops() {
   let $products = $('#products');
   let xhr = $.getJSON('https://api.mercadolibre.com/sites/MPE/search?q=laptops&condition=new');
   xhr.done(function(data) { 
-    console.log(data);
+    // console.log(data);
     $products.html('');
 
     let dataArticles = data.results;
@@ -14,8 +14,11 @@ function laptops() {
       let availableQuantity = element.available_quantity;
       let soldQuantity = element.sold_quantity; 
 
+      /* Utilizaremos esta funcion para remplazar espacios por '-' */
+      let titleChain = spaces(title);
+
       $products.append(`
-     <a href="#/id=${categoryId}-${title}" class="col-5 display margin selection" data-img="${img}" data-title="${title}" data-price="${price}" data-available="${availableQuantity}" data-sold="${soldQuantity}">
+     <a href="#/id=?${categoryId}-${titleChain}" class="col-5 display margin selection" data-img="${img}" data-title="${title}" data-price="${price}" data-available="${availableQuantity}" data-sold="${soldQuantity}">
      <div class="col-12 flex">
          <img src="${img}" alt="title" class="bor-rad">
      </div>
@@ -42,16 +45,24 @@ function laptop() {
     let productAvailable = $(this).attr('data-available');
     let productSold = $(this).attr('data-sold');
 
-    $products.append(`<div class="col-12">
-        <div class="col-7 flex">
+    $products.append(`<div class="col col-lg-12 flex">
+        <div class="col col-lg-10 flex container-laptop">
+        <div class="col-5 flex">
             <img src="${productImg}" alt="title" class="bor-rad">
         </div>
-        <div class="col-5">
-            <p>${productTitle}</p>
+        <div class="col-7">
+            <h3>${productTitle}</h3>
             <p>Price: S/.${productPrice}</p>
             <p>Available Quantity: ${productAvailable}</p>
             <p>SoldQuantity: ${productSold}</p>
         </div>
+        </div>
         </div>`);
   });
+}
+
+function spaces(title) {
+  var chain = title;
+  chain = chain.replace(/\s/g, '-');
+  return chain;
 }

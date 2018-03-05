@@ -39,3 +39,17 @@
   padding: 10px;
   box-shadow: 5px 10px #888888;
 }
+
+.container-laptop {
+  margin-top: 5rem;
+  background-color: #f7f7f7;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 965px) {
+  [alt="title"] {
+    width: 15rem;
+    height: 15rem;
+  }
+}
