@@ -1,12 +1,17 @@
 var express = require('express');
 var app = express();
 
-// Archivos estaticos  (js y css)
-app.use(express.static(__dirname + '/public'));
-// Index.html
+var port = process.env.PORT || 8080;
+
+var todoRoutes = require('./routes/ruta');
+
 app.use(express.static(__dirname + '/views'));
-app.get('/', function(req, res) {
+app.use(express.static(__dirname + '/public'));
+
+app.get('/', function (req, res) {
   res.sendfile('index.html');
 });
+app.get('/alcatel', todoRoutes);
 
-app.listen(3000);
+
+app.listen(port);

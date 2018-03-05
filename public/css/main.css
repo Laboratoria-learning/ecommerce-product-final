@@ -1,0 +1,20 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+header {
+  background: url('../assets/images/fondo.jpg');
+  background-size: cover;
+  box-shadow: 1px 1px 5px #c3c3c3;
+  height: 60vh;
+  margin-bottom: 3vh;
+}
+
+.box-celphone:hover {
+  border: 1px solid #f0f0f0;
+  padding: 5vh;
+}
+
+.box-celphone>img:hover {
+  height: 20vh;
+}

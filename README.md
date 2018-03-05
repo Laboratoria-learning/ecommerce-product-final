@@ -1,25 +1,24 @@
 # E-commerce
-
-* **Track:** _Especialización Front-end_
-* **Curso:** _CONSTRUYE UNA SINGLE PAGE APP (SPA) MULTI-USUARIO CONSUMIENDO DATA REMOTA_
-* **Unidad:** _Producto final_
-
 ***
 
-## Flujo de trabajo
+## Objetivo:
 
-1. Debes realizar un [**fork**](https://gist.github.com/ivandevp/1de47ae69a5e139a6622d78c882e1f74)
-   de este repositorio.
+* crear un Single Page Application haciendo uso de APIs de mercado libre y papal.
 
-2. Luego deberás **clonar** tu fork en tu máquina. Recuerda que el comando a usar
-   es `git clone` y su estructura normalmente se ve así:
+## Proceso
+1. Delimitar el tema para crear el sitio web.
+2. Hacer el diseño del sitio web e-commerce
+3. Obtener la data de la API de mercado libre.
 
-   ```bash
-   git clone https://github.com/<nombre-de-usuario>/freelancer.git
-   ```
+## Demo:
 
-3. Cuando hayas terminado tu producto, envía un Pull Request a este repositorio
-   (puedes solicitar apoyo de tus profes para este paso).
+![Sin titulo](public/assets/docs/index.PNG)
 
-> Nota: No olvides que es una buena práctica describir tu proyecto en este
-> archivo `README.md` y también desplegar tu web a Github Pages :smiley:.
+* Cuando seleccionas un de los item de la barra de navegación por ejemplo alcatel te mostrará lo siguiente: 
+
+![Sin titulo](public/assets/docs/alcatel.PNG)
+
+En la anterior imagen se puede observar que se cargaron todos los celulares del modelo alcatel, este proceso se realiza para los demás modelos de celulares.
+
+
+
