@@ -1,6 +1,10 @@
+/* Global */
+
 body {
   font-family: 'Raleway', sans-serif;
 }
+
+/* Style for container */
 
 header {
   background: url('../assets/images/fondo.jpg');
@@ -24,8 +28,6 @@ header {
   justify-content: center;
   align-items: center;
 }
-
-/* Style for main */
 
 .display {
   display: inline-block;

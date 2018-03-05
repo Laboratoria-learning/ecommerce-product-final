@@ -45,6 +45,7 @@ Luego levantas el servidor a través de este comando
 
 ```
 npm start
+```
 
 ### Desarollado para
 
