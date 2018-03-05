@@ -20,7 +20,7 @@ function laptops() {
       $products.append(`
      <a href="#/id=?${categoryId}-${titleChain}" class="col-5 display margin selection" data-img="${img}" data-title="${title}" data-price="${price}" data-available="${availableQuantity}" data-sold="${soldQuantity}">
      <div class="col-12 flex">
-         <img src="${img}" alt="title" class="bor-rad">
+         <img src="${img}" alt="title laptop" class="image">
      </div>
      <div class="col-12">
          <p>${title}</p>

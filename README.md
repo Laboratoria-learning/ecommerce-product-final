@@ -1,25 +1,19 @@
 # E-commerce
 
-* **Track:** _Especialización Front-end_
-* **Curso:** _CONSTRUYE UNA SINGLE PAGE APP (SPA) MULTI-USUARIO CONSUMIENDO DATA REMOTA_
-* **Unidad:** _Producto final_
+- E-commerce es una página, que te permitirá buscar la latop de tu preferencia.
 
-***
+![portada-ecommerce](public/assets/images/E-commerse.png)
 
 ## Flujo de trabajo
 
-1. Debes realizar un [**fork**](https://gist.github.com/ivandevp/1de47ae69a5e139a6622d78c882e1f74)
-   de este repositorio.
+- La vista principal muestra todas las laptops que estan disponibles.
+- Al hacer click en una de ellas se mostrará mayor información del producto.
+- Para regresar a la vista principal deberá hacer click en el boton laptops.
 
-2. Luego deberás **clonar** tu fork en tu máquina. Recuerda que el comando a usar
-   es `git clone` y su estructura normalmente se ve así:
+## Desarollado para
 
-   ```bash
-   git clone https://github.com/<nombre-de-usuario>/freelancer.git
-   ```
+[Laboratoria](http://laboratoria.la)
 
-3. Cuando hayas terminado tu producto, envía un Pull Request a este repositorio
-   (puedes solicitar apoyo de tus profes para este paso).
-
-> Nota: No olvides que es una buena práctica describir tu proyecto en este
-> archivo `README.md` y también desplegar tu web a Github Pages :smiley:.
+### Integrantes:
+- Betsy Vidal
+- Melyna Pernia
