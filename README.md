@@ -1,7 +1,7 @@
 # E-commerce
 ***
 
-<<<<<<< HEAD
+
 ### Objetivo:
 
 * crear un Single Page Application haciendo uso de APIs de mercado libre y papal.
