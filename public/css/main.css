@@ -16,6 +16,14 @@
   top: 7px;
 }
 
+.price{
+  font-size: 20px;
+}
+
+.font-s{
+  font-size: 16px;
+}
+
 /* 00FAAB*/
 div#PPMiniCart .minicart-item a.minicart-name {
 top:2px;

@@ -52,14 +52,16 @@ $(document).ready(function() {// 2DCF9C
     }); 
   }
   function template(element) {
-    let template = `<div class="col-lg-3">
+    let template = `<div class="col-6 col-lg-3">
         <div class="card h3">
-        <div class="text-center"><img class="img-r" src="${element.thumbnail}" alt="Card image cap"></div>
+        <div class="text-center pt-2"><img class="img-r" src="${element.thumbnail}" alt="Card image cap"></div>
         <div class="card-body text-center">
-          <h5 class="card-title">${element.title}</h5>
-          <p class="card-text">Precio : S/. ${element.price}</p>
+          <h5 class="font-s">${element.title}</h5>
+          <p class="price">Precio : S/. ${element.price}</p>
+          <div class="card-body">
           <a href="#" class="btn btn-primary product" id="${element.id}" price="${element.price}" title="${element.title}" role="button">Buy</a>
-        </div>
+          </div>
+          </div>
          </div>
       </div>`;
     $('.row').append(template);
@@ -71,7 +73,7 @@ $(document).ready(function() {// 2DCF9C
         , empty: 'You have no items in your bag'
       }
     });
-    $('#' + element.id + '').click(function(e) {
+    $('#' + element.id + '').click(function(event) {
       paypal.minicart.cart.add({
         business: 'gamestore@gmail.com', // Cuenta paypal para recibir el dinero
         item_name: $(this).attr('title'),
