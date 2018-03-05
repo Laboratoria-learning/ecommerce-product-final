@@ -11,11 +11,11 @@
 
 ### Demo:
 
-![Sin titulo](public/assets/docs/index.png)
+![Sin titulo](public/assets/docs/index.PNG)
 
 * Cuando seleccionas un de los item de la barra de navegación por ejemplo alcatel te mostrará lo siguiente: 
 
-![Sin titulo](public/assets/docs/alcatel.png)
+![Sin titulo](public/assets/docs/alcatel.PNG)
 
 En la anterior imagen se puede observar que se cargaron todos los celulares del modelo alcatel, este proceso se realiza para los demás modelos de celulares.
 
