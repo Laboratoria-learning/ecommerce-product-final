@@ -1,0 +1,49 @@
+.product {
+  display: inline-block;
+  width: 20em;
+  text-align: center;
+  padding: 2em;
+  box-sizing: border-box;
+}
+.titleProduct{
+  font-size: 0.8em;
+  text-align: center;
+}
+.imgProduct{
+  text-align: center;
+}
+
+.PicturesContainer{
+  text-align: center;
+  margin-top: 2%;
+}
+
+form{
+  text-align: center;
+  margin-top: 2%;
+}
+.Search{
+  text-align: center;
+}
+.searchInput{
+  width: 70%;
+  
+  border-top: 1px solid grey;
+  border-left: 1px solid grey;
+  border-bottom: 1px solid grey;
+  padding: 1em;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+.searchButton{
+  padding: 1em;
+  outline: none;
+  border: 1px solid grey;
+  background-color: lightblue;
+  box-sizing: border-box;
+  transition: all ease 0.5s;
+}
+.searchButton:hover{
+  background-color: #000;
+  color: #FFF;
+}

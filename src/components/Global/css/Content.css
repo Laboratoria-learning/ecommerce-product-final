@@ -1,0 +1,43 @@
+.Content{
+  width: 100%;
+  height: auto;
+}
+
+.Promo1 {
+  width: 100%
+}
+
+.Promo2 {
+  width: 100%
+}
+
+.Sales1{
+  display: block;
+  width: 40%;
+  height: auto;
+  float: left;
+  margin: 0 auto;
+  margin-left: 8%;
+}
+
+.Sales2{
+  display: block;
+  width: 40%;
+  height: auto;
+  float: right;
+  margin: 0 auto;
+  margin-right: 8%;
+}
+
+.Offers{
+  text-align: center;
+}
+
+.Items{
+  text-align: center;
+  margin-top: 2%;
+}
+
+/*form{
+  text-align: center;
+}*/
