@@ -1,0 +1,7 @@
+<div class="col-5 pay-big-container">
+  <div class="pay-container text-center">
+    <div class="total-container"> <span class="label">Total</span> <span id="total">CLP$<%= calculateTotalPrice() %></span> </div>
+    <div class="pay-button"><a id="pay" href="#/cart/payment" class="btn"> Pay </a></div>
+    <div class="cancel-button"><a id="cancel" class="btn"> Cancel Order </a></div>
+  </div>
+</div>

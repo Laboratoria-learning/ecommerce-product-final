@@ -1,0 +1,32 @@
+{
+  "name": "nerd",
+  "version": "1.0.0",
+  "description": "E-Commerce site made with Sammy.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malditoprotozoo/nerd.git"
+  },
+  "keywords": [
+    "website",
+    "sammy",
+    "spa",
+    "e-commerce"
+  ],
+  "author": "Victoria Tori Rodríguez, Leticia Ferreira, Andrea Díaz, Pamela Inalef",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "latest"
+  },
+  "bugs": {
+    "url": "https://github.com/malditoprotozoo/nerd/issues"
+  },
+  "homepage": "https://github.com/malditoprotozoo/nerd#readme",
+  "dependencies": {
+    "node-sass": "^4.7.2"
+  }
+}

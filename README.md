@@ -1,25 +1,24 @@
-# E-commerce
+# Nerd Bookstore
+**Nerd Bookstore** es el demo de una tienda online de venta de libros, cómics y mangas, cuyo sitio web es una Single Page Application (SPA).
 
-* **Track:** _Especialización Front-end_
-* **Curso:** _CONSTRUYE UNA SINGLE PAGE APP (SPA) MULTI-USUARIO CONSUMIENDO DATA REMOTA_
-* **Unidad:** _Producto final_
+## Desarrollo
+Para crear Nerd Bookstore partimos por utilizar un web scraper hecho por nosotras para recopilar los datos desde Book Depository (puedes verlo [aquí](https://github.com/malditoprotozoo/bookScrape)).
 
-***
+Nuestro proyecto cuenta con cuatro vistas diferentes y para desarrollarlas utilizamos la librería [Sammy JS](http://sammyjs.org/) y su plugin para el uso de templates.
 
-## Flujo de trabajo
+Para almacenar la información de compra utilizamos Local Storage a través de un plugin del mencionado Sammy.
 
-1. Debes realizar un [**fork**](https://gist.github.com/ivandevp/1de47ae69a5e139a6622d78c882e1f74)
-   de este repositorio.
+## Templates
 
-2. Luego deberás **clonar** tu fork en tu máquina. Recuerda que el comando a usar
-   es `git clone` y su estructura normalmente se ve así:
+* La vista inicial corresponde a todos los items disponibles:
+![All Items View](assets/img/all-items.png)
+* Al hacer click en un producto se pueden ver más detalles sobre el mismo y además se entrega la opción de comprarlo en Book Depository:
+![Item Detail View](assets/img/item-detail.png)
+* El carro de compras es otra vista. En él se pueden encontrar todos los productos que han sido agregados, con su título correspondiente, la cantidad y el precio total.
+![Cart View](assets/img/cart.png)
+* Para las búsquedas desarrollamos otro template, similar a la vista inicial, con la diferencia de que sólo muestra los items que se corresponden con la búsqueda:
+![Search View](assets/img/search.png)
 
-   ```bash
-   git clone https://github.com/<nombre-de-usuario>/freelancer.git
-   ```
-
-3. Cuando hayas terminado tu producto, envía un Pull Request a este repositorio
-   (puedes solicitar apoyo de tus profes para este paso).
-
-> Nota: No olvides que es una buena práctica describir tu proyecto en este
-> archivo `README.md` y también desplegar tu web a Github Pages :smiley:.
+## Desarrolladoras
+* Leticia Ferreira /helvette/
+* Victoria Tori Rodríguez /malditoprotozoo/

@@ -1,0 +1,100 @@
+body {
+  overflow-x: hidden;
+}
+
+/* sección de productos */
+body #products {
+  margin: 0;
+  margin-top: 2em;
+  padding: 1em;
+  position: relative;
+}
+
+
+/* card */
+body #products .card {
+  position: relative;
+  padding: 1em;
+  height: 500px;
+  font-size: 14px;
+  border-radius: 0;
+  border: 1px solid #332C1F;
+  box-shadow: 7px 7px 0px 0px #332C1F;
+}
+
+body #products .card:hover {
+  bottom: -7px;
+  right: -7px;
+  box-shadow: 0px 0px 0px 0px;
+}
+
+body #products .item.col {
+  margin-bottom: 3em;
+  max-width: 250px;
+}
+
+/* imagen de card */
+body #products .item.col .item-image {
+  text-align: center;
+}
+
+body #products .item.col .item-image img {
+  width: 160px;
+  height: 260px;
+  object-fit: cover;
+}
+
+/* cuerpo de card */
+body #products .card .card-body {
+  padding: 20px 0;
+}
+
+/* título card */
+body #products .card .card-title {
+  font-size: 16px;
+}
+
+/* subtítulo */
+body #products .card .card-subtitle {
+  font-size: 14px;
+}
+
+/* botón de card */
+body #products .card .btn {
+  position: absolute;
+  bottom: 20px;
+  width: 25%;
+  padding: 8px 0;
+  background-color: #0FAAB1;
+  color: white;
+}
+
+body #products .card .btn:hover {
+  background-color: #EB265D;
+}
+
+/* precio */
+body #products .card .item-price {
+  position: absolute;
+  bottom: -1px;
+  right: 14px;
+  padding: 10px;
+  background-color: #FF9326;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* links */
+body #products a {
+  color: #0FAAB1;
+}
+
+body #products a:hover {
+  color: #EB265D;
+}
+
+/* otros de card */
+body #products .card hr {
+  margin: 0;
+}

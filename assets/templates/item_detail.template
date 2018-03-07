@@ -1,0 +1,42 @@
+<div class="item-detail row" id="item-detail-container">
+  <div class="item-info col-8 row">
+    <div class="item-image col-4">
+      <img src="<%= app.item.img %>" alt="<%= app.item.title %>"/>
+    </div>
+    <div class="item-info-container col-8">
+      <div class="item-title"><%= app.item.title %></div>
+      <hr>
+      <ul>
+        <li class="item-categories"><%= app.item.categories %></li>
+        <div class="v-hr"></div>
+        <li class="item-details-language"><%= app.item.details['language'] %></li>
+        <div class="v-hr"></div>
+        <li class="item-details-format"><%= app.item.details['format'] %></li>
+      </ul>
+      <div class="item-artist"><span>Author:</span> <%= app.item.author %></div>
+      <div class="item-description"><span></span> <%= app.item.description %></div>
+      <div class="item-details-pub-date"><span>Publication date:</span> <%= app.item.details['publication date'] %></div>
+      <div class="item-details-pub-country"><span>Publication City/Country:</span> <%= app.item.details['publication city/country'] %></div>
+      <div class="item-details-publisher"><span>Publisher:</span> <%= app.item.details['publisher'] %></div>
+    </div>
+    <div class="item-link">
+      <a href="https://www.bookdepository.com/search?searchTerm=<%= app.item.title %>&search=Find+book" target="_blank">Buy this item on Bookdepository</a>
+    </div>
+    <div class="back-link">
+      <a href="#/">&laquo; Back to Items</a>
+    </div>
+  </div>
+  <div class="form-container col-4">
+  <div class="item-form">
+    <div class="item-price"><%= app.item.price %></div>
+    <form action="#/cart" method="post">
+      <input type="hidden" name="item_id" value="<%= params['id'] %>" />
+      <p class="quantity">
+        <label>Quantity:</label>
+        <input type="number" name="quantity" value="1" min="0" />
+      </p>
+      <p class="cart-button"><input type="submit" value="Add to Cart" class="btn"/></p>
+    </form>
+  </div>
+  </div>
+</div>

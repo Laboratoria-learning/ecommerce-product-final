@@ -1,0 +1,12 @@
+
+<div class="col-7">
+  <div class="row item-cart-container vertical-align text-center col-12">
+    <div class="cart-img col-2">
+      <img src="<%= item.img %>" alt="<%= item.title %>"/>
+    </div>
+    <div class="col-5"><h5 class="cart-title"><a href="#/item/<%= item.id %>"><%= item.title %></a></h5></div>
+    <div class="col-2"><span class="cart-quantity badge badge-pill"><%= item.quantity %></span></div>
+    <div class="col-3"><h6 class="cart-price">CLP$<%= item.price %></div>
+    <button class="remove" id="<%= item.id %>"><i class="fas fa-times fa-lg"></i></i></button>
+  </div>
+</div>

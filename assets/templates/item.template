@@ -1,0 +1,17 @@
+<div class="item col">
+  <div class="card">
+    <div class="item-image card-img-top">
+        <a href="#/item/<%= id %>">
+          <img src="<%= item.img %>" alt="<%= item.title %>"/>
+        </a>
+    </div>
+    <div class="card-body">
+      <hr>
+      <div class="item-title"><h5 class="card-title"><a href="#/item/<%= id %>"><%= item.title %></a></h5></div>
+      <div class="item-artist"><h6 class="card-subtitle mb-2 text-muted"><%= item.author %></h6></div>
+      <div class="item-price"><%= item.price %></div>
+      <hr>
+      <a class="btn btn-add-to-cart" data-toggle="tooltip" data-placement="bottom" title="Add to cart!" data-value="<%=item.id%>" data-price="<%=item.price%>"><i class="fas fa-cart-plus fa-lg"></i></a>
+    </div>
+  </div>
+</div>
