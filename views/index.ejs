@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Beauty Sales - Shopping Cart</title>
+  <link rel="stylesheet" href="assets/css/materialize.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    
+  </header>
+  <div class="shopping-cart">
+    <ul>
+      <li>{{ name }} {{ price }}</li>
+      <li>{{ name}} {{ price }}</li>
+      <li>{{ name}} {{ price }}</li>
+    </ul>
+    <div class="total">Total Amount:  25 $</div>
+    <form action="/pay" method="post">
+      <input type="submit" value="buy">
+    </form>
+  </div>
+  <div class="payment">
+    
+  </div>
+  
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/handlebars-v4.0.11.js"></script>
+  <script src="assets/js/materialize.min.js"></script>
+  <script src="assets/js/script.js"></script>
+
+</body>
+</html>
