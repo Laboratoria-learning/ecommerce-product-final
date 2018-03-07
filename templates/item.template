@@ -1,0 +1,11 @@
+    <div class="item col-md-3">
+  <a href="#/item/<%= id %>">
+    <div class="item-image row">
+      <img src="<%= item.image %>" alt="<%= item.title %>" />
+    </div>
+    <div class="row">
+      <h5 class="item-artist"><%= item.title %></h5>
+      <p class="item-price">$<%= item.price %></p>
+    </div>
+  </a>
+</div>

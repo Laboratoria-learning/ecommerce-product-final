@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>d'papel</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="stylesheets/jsonstore.css" type="text/css" media="screen" charset="utf-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyBp62l0Nv2rv8F9_MDgm2v7jWhPALlCkbI",
+    authDomain: "d-papel.firebaseapp.com",
+    databaseURL: "https://d-papel.firebaseio.com",
+    projectId: "d-papel",
+    storageBucket: "",
+    messagingSenderId: "412099125004"
+    };
+    firebase.initializeApp(config);
+    </script>
+  </head>
+  <body>
+    <!-- Modal Registro-->
+    <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h3 class="text-center">Registro</h3>
+          </div>
+          <div class="modal-body-register">
+            <form class="container-fluid" data-toggle="validator" role="form">
+              <div class="form-group">
+                <div class="row">
+                  <div class="row">
+                    <label for="inputEmail" class="control-label col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">Correo electrónico</label>
+                  </div>
+                  <div class="row">
+                    <input id="inputEmailReg" class="col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 col-sm-8 col-xs-8 col-lg-8 col-md-8" type="email" class="form-control"  aria-describedby="basic-addon2" placeholder="correo electrónico" data-error="Por favor ingresa un correo electrónico válido. Ej. ejemplo@mail.com" required>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 col-sm-8 col-xs-8 col-lg-8 col-md-8 help-block with-errors"></div>
+                  </div>
+                  </div> <!-- /row -->
+                  </div> <!-- /form-group -->
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="row">
+                        <label for="inputPassword" class="control-label col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">Contraseña</label>
+                      </div>
+                      <div class="row">
+                        <input class="col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 col-sm-8 col-xs-8 col-lg-8 col-md-8" type="password" data-minlength="6" class="form-control"  aria-describedby="basic-addon2" id="inputPassReg" placeholder="Contraseña" required>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 col-sm-8 col-xs-8 col-lg-8 col-md-8 help-block">Mínimo de 6 caracteres</div>
+                      </div>
+                    </div>
+                    </div> <!-- /form-group -->
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="row">
+                          <label for="inputPasswordConfirm" class="control-label col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">Confirma tu contraseña</label>
+                        </div>
+                        <div class="row">
+                          <input class="col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 col-sm-8 col-xs-8 col-lg-8 col-md-8" type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassReg" data-match-error="Ups, las contraseñas no coinciden." data-error="Completa este campo" placeholder="Confirma tu contraseña" required>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 col-sm-8 col-xs-8 col-lg-8 col-md-8 help-block with-errors"></div>
+                        </div>
+                      </div>
+                      </div> <!-- /form-group -->
+                      <div class="form-group">
+                        <button id="register-btn" type="submit" data-dismiss="modal" class=" mb-1 btn btn-primary col-md-offset-3 col-lg-offset-3 col-md-6 col-lg-6 col-sm-offset-2 col-xs-offset-2 col-sm-8 col-xs-8 btn-registro">Enviar</button>
+                      </div>
+                    </form>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                    </div> <!-- /modal-body -->
+                    </div> <!-- /modal-content -->
+                    </div> <!-- /modal-dialog -->
+                    </div><!-- /modal fade - fin modal de registro -->
+                    <!-- Modal Log In -->
+                    <div class="modal fade" id="modalLog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h3 class="text-center">Iniciar sesión</h3>
+                          </div>
+                          <div class="modal-body">
+                            <form data-toggle="validator" role="form">
+                              <div class="row">
+                                <div class="form-group">
+                                  <div class="row">
+                                    <label for="inputEmail" class="control-label col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">Correo electrónico</label>
+                                  </div>
+                                  <div class="row">
+                                    <input id="inputEmailLog" class="col-xs-offset-1 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 col-sm-8 col-xs-8 col-lg-8 col-md-8 " type="email" class="form-control"  aria-describedby="basic-addon2" placeholder="correo electrónico" data-error="Por favor ingresa un correo electrónico válido. Ej. ejemplo@mail.com" required>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 col-sm-8 col-xs-8 col-lg-8 col-md-8 help-block with-errors"></div>
+                                  </div>
+                                  </div> <!-- /form-group -->
+                                  </div> <!-- /row -->
+                                  <div class="row">
+                                    <div class="form-group">
+                                      <div class="row">
+                                        <label for="inputPassword" class="control-label col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">Contraseña</label>
+                                      </div>
+                                      <div class="row">
+                                        <div class="row">
+                                          <input class="col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 col-sm-8 col-xs-8 col-lg-8 col-md-8" type="password" data-minlength="6" class="form-control" aria-describedby="basic-addon2" id="inputPassLog" placeholder="contraseña" required>
+                                        </div>
+                                        <div class="row">
+                                          <div class="col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 help-block">Mínimo de 6 caracteres</div>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <a class="col-xs-offset-2 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 col-sm-8 col-xs-8 col-lg-8 col-md-8" id="forgotPass" href="">Olvidaste tu contraseña? Haz click aquí!</a>
+                                      </div>
+                                      </div> <!-- /form-group -->
+                                      </div> <!-- /row -->
+                                      <div class="row">
+                                        <div class="form-group">
+                                          <button id="log-btn" type="submit" class="btn btn-primary col-xs-offset-4 col-sm-offset-4 col-sm-4 col-xs-4 btn-ingreso" data-dismiss="modal">Iniciar sesión</button>
+                                        </div>
+                                      </div>
+                                    </form>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-default" data-dismiss="modal">cerrar</button>
+                                    </div>
+                                    </div> <!-- /modal-body -->
+                                    </div> <!-- /modal-content -->
+                                    </div> <!-- /modal-dialog -->
+                                    </div> <!-- /modal fade -->
+                                    
+                                    <section id="navBar">
+                                      <div class="collapse navbar-collapse navbar-inverse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav navbar-left">
+                                          <img src="logo.png" alt="d'papel" />
+                                        </ul>
+                                        <ul class="nav navbar-nav navbar-right">
+                                          <li class=""><a id="logIn" data-toggle="modal" data-target="#modalLog" role="button">Iniciar sesión</a></li>
+                                          <li><a id="register" data-toggle="modal" data-target="#modalRegister" role="button">Registro</a></li>
+                                          <li><a id="logOut" role="button">Cerrar sesión</a></li>
+                                          <li> <div class="cart-info">
+                                            My Cart (<span class="cart-items">0</span> items)
+                                          </div></li>
+                                        </ul>
+                                      </div>
+                                    </section>
+                                    <div class="container">
+                                      <div id="main">
+                                      </div>
+                                    </div>
+                                    <script src="javascript/jquery-1.4.2.js" type="text/javascript" charset="utf-8"></script>
+                                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                                    <script src="data/data.json"></script>
+                                    <script src="javascript/sammy/sammy.js" type="text/javascript" charset="utf-8"></script>
+                                    <script src="javascript/sammy/plugins/sammy.template.js" type="text/javascript" charset="utf-8"></script>
+                                    <script src="javascript/sammy/plugins/sammy.json.js" type="text/javascript" charset="utf-8"></script>
+                                    <script src="javascript/sammy/plugins/sammy.storage.js" type="text/javascript" charset="utf-8"></script>
+                                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                                    <script src="javascript/validate.min.js"></script>
+                                    <script src="javascript/app.js"></script>
+                                  </body>
+                                </html>

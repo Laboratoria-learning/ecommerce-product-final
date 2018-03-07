@@ -1,0 +1,98 @@
+/******************************************************
+ *  json store  *
+\*****************************************************/
+body {
+  font-family: "Lucida Grande", Lucida, Helvetica, Arial, sans-serif;
+  background: #FFF;
+  color: #333;
+  margin: 0px;
+  padding: 0px;
+}
+
+#header {
+  background: rgba(68,102,154,1);
+background: -moz-linear-gradient(top, rgba(68,102,154,1) 0%, rgba(85,126,187,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(68,102,154,1)), color-stop(100%, rgba(85,126,187,1)));
+background: -webkit-linear-gradient(top, rgba(68,102,154,1) 0%, rgba(85,126,187,1) 100%);
+background: -o-linear-gradient(top, rgba(68,102,154,1) 0%, rgba(85,126,187,1) 100%);
+background: -ms-linear-gradient(top, rgba(68,102,154,1) 0%, rgba(85,126,187,1) 100%);
+background: linear-gradient(to bottom, rgba(68,102,154,1) 0%, rgba(85,126,187,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#44669a', endColorstr='#557ebb', GradientType=0 );
+  margin: 0px;
+  padding: 10px;
+  margin-bottom: 3em;
+}
+#header h1 {
+  font-family: Inconsolata, Monaco, Courier, mono;
+  color: #FFF;
+  margin: 0px;
+}
+
+.cart-info {
+  background: #fff;
+  color: #000;
+  font-size: 1em;
+  padding: 1em;
+  font-weight: bold;
+}
+img {
+  border: 0;
+}
+
+.item {
+  float:left;
+  width: 200px;
+  height: 300px;
+  text-align:center;
+  font-size: 12px;
+  padding: 1em;
+  margin-bottom:1em;
+}
+
+.item a{
+  text-decoration: none;
+  color: #3F3F3F;
+}
+
+.item a:hover {
+  text-decoration: none;
+  color: #3F3F3F;
+}
+.item-title {
+  font-weight: bold;
+}
+.item-description{
+  text-align: justify;
+}
+.item-artist {
+  padding-left: 2em;
+  padding-right: 2em;
+  font-weight: bold;
+  font-size: 15px;
+  color:#496B97;
+}
+.item-detail .item-image {
+  float:left;
+}
+.item-detail .item-info {
+  padding: 60px 75px 0px 10px;
+}
+
+.item-image{
+  margin-bottom:1em;
+}
+
+.item-price{
+  font-size: 14px;
+  font-weight: bold;
+  color:#464646;
+  margin-bottom: 1em;
+}
+
+.dblock{
+  display: inline-block;
+}
+
+.nav {
+  padding: 1.4em;
+}
