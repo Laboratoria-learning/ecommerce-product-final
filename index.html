@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- bootstrap styles -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- our styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700,800,800i" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <title>Nerd</title>
+</head>
+  <body>
+    <nav class="navbar navbar-light">
+      <a class="navbar-brand" href="#/">
+        <img src="assets/img/nerd-login.png" alt="">
+      </a>
+      <ul class="left">
+        <a href="#/"><li id="home">Home</li></a>
+        <li id="about">About</li>
+        <li id="fqa">FAQ</li>
+      </ul>
+    </nav>
+    <div id="sub-nav">
+      <div class="row vertical-align">
+        <div class="col-12 col-md-6">
+          <div class="input">
+            <input type="text" class="search-input" placeholder="What are you shopping for?">
+            <a id="go-search" href=""><i class="fas fa-search"></i></a>
+          </div>
+          
+        </div>
+        <div class="col-md-3">
+          <a href="#/wishlist">
+            <button class="btn float-right" id="wishlist-btn">Wishlist <i class="fas fa-heart"></i></button>
+          </a>
+        </div>
+        <!-- se supone que cart-access entero es el acceso al carro -->
+        <div class="col-12 col-md-3">
+          <a href="#/cart"><div class="right" id="cart-access">
+            <span class="b-span">CLP$<span id="total-amount">0</span></span>
+            <hr>
+            <span class="b-span"><span id="items-cart">0</span> Items</span>
+            <span class="b-span"><i class="fas fa-shopping-cart"></i></span>
+          </div></a>
+        </div>
+      </div>
+    </div>
+    <div class="row main-container" id="container">
+      <div id="categories" class="col-12 col-md-3"><div class="container-categories">
+        <h5>Filter by categories</h5><ul class="list-group"></ul>
+      </div>
+    </div>
+      <div id="products" class="card-group col row"></div>
+    </div>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <!-- stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <!-- nuestro paymentjs -->
+    <script src="assets/js/payment.js"></script>
+    <!-- sammy -->
+    <script src="assets/js/sammy.js"></script>
+    <!-- sammy plugins -->
+    <script src="assets/js/sammy.template.js"></script>
+    <script src="assets/js/sammy.json.js"></script>
+    <script src="assets/js/sammy.storage.js"></script>
+    <!-- popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- boostrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- app.js -->
+    <script src="assets/js/app.js"></script>
+    <!-- fontawesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+  </body>
+</html>

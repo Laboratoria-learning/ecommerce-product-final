@@ -1,0 +1,20 @@
+<div id="card"></div>
+
+<form action="#">
+  
+    <label>Credit Card Number </label>
+    <input type="text" name="number" />
+
+    <label>Expiration</label>
+    <input type="text" placeholder="MM/YY" name="expiry"/>
+
+    <label>Name</label>
+    <input type="text" name="name" />
+
+    <label>CVV </label>
+    <input type="text" name="cvv" />
+  
+  <button type="button" class="btn btn-success">Submit</button>
+  <button type="button" class="btn btn-info">Clear</button>
+
+</form>
