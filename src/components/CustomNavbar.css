@@ -1,0 +1,53 @@
+nav.navbar, .navbar-default {
+  background-color: white !important;
+}
+
+.navbar-default {
+  background-image: none;
+  border: none;
+  border-radius: 0;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #2EA7D9;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: white;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #2EA7D9;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: transparent;
+}
+
+.navbar-default:focus, .navbar-default:hover {
+  color: white;
+  background-color: #2EA7D9;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: white;
+  background-color: #2EA7D9;
+}
+
+.navbar-brand>img {
+  height: 100%;
+}
+.navbar-header>a {
+  padding: 0.4em !important;
+}
+
+.navbar-form{
+  margin-right: 4em !important;
+}
+.navbar{
+  margin-bottom: 0;
+}
