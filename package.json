@@ -1,0 +1,23 @@
+{
+  "name": "ecommercespa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "assets/js/json_store.js",
+  "dependencies": {
+    "fi-khipu": "^0.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mthompsonc/eCommerceSpa.git"
+  },
+  "author": "Paulina Baeza, Camila Cornejos, María Paz Thompson y Sabrina Villalobos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mthompsonc/eCommerceSpa/issues"
+  },
+  "homepage": "https://github.com/mthompsonc/eCommerceSpa#readme"
+}

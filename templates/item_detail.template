@@ -1,0 +1,34 @@
+<div class="item-detail">
+  <div class="col-md-6">
+    <div class="row">
+      <div class="back-link"><a href="#/">&laquo; Back to Items</a></div>
+    </div>
+    <div class="row">
+      <div class="item-image"><img src="<%= item.large_image %>" alt="<%= item.name %>" /></div>
+    </div>
+  </div>
+</div>
+<div class="col-md-6">
+  <div class="item-info">
+  <div class="item-artist text-right">Categoría: <%= item.category %></div>
+  <h1 class="item-title text-center" style="text-align= center;"><%= item.title %></h1>
+  <br>
+  
+  <div class="item-description"><%= item.description %></div>
+  <br>
+  <div class="item-price text-center bg-info">$<%= item.price %></div>
+  <div class="item-form center-" id="addCart">
+    <form action="#/cart" method="post" class="dblock">
+      <input type="hidden" name="item_id" value="<%= params['id'] %>" />
+      <p class="dblock">
+        <label>Cantidad:</label>
+        <input type="text" size="2" name="quantity" value="1" />
+      </p>
+      <p class="btn dblock"><input type="submit" value="Añadir a Carrito" /></p>
+    </form>
+  </div>
+  <form class='pay' method='POST' method="post" action="javascript:alert('Tu compra fue exitosa')">
+    <script src='https://checkout.stripe.com/checkout.js' class='stripe-button center-block' data-key='pk_test_LMeQ66Q4hSaSh774qEv4EzwZ'" data-image='<%= item.image %>' data-name='<%= item.name %>' data-description='<%= item.description %>' data-amount='<%= (item.price * 100) %>' data-label='Comprar' ></script>
+  </form>
+
+</div>

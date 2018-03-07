@@ -1,25 +1,27 @@
-# E-commerce
+# D'papel
 
-* **Track:** _Especialización Front-end_
-* **Curso:** _CONSTRUYE UNA SINGLE PAGE APP (SPA) MULTI-USUARIO CONSUMIENDO DATA REMOTA_
-* **Unidad:** _Producto final_
+### Descripción
 
-***
+Es una Single Page Application de venta de productos de papelería desarrollada con el framework Sammy.js, la API de Stripe y un archivo json con el listado de productos.
 
-## Flujo de trabajo
+Se utilizaron dos templates que corresponden a las siguientes vistas de la página:
 
-1. Debes realizar un [**fork**](https://gist.github.com/ivandevp/1de47ae69a5e139a6622d78c882e1f74)
-   de este repositorio.
+### Previsualización
 
-2. Luego deberás **clonar** tu fork en tu máquina. Recuerda que el comando a usar
-   es `git clone` y su estructura normalmente se ve así:
+* Vista Principal
+![img](https://image.ibb.co/nCUMtH/vista_principal.png)
 
-   ```bash
-   git clone https://github.com/<nombre-de-usuario>/freelancer.git
-   ```
+* Detalle de Producto
+![img](https://image.ibb.co/dNPnYH/detalle.png)
 
-3. Cuando hayas terminado tu producto, envía un Pull Request a este repositorio
-   (puedes solicitar apoyo de tus profes para este paso).
+* Carrito de Compras con Log in
+![img](https://image.ibb.co/eoYEDH/login_carrito.png)
 
-> Nota: No olvides que es una buena práctica describir tu proyecto en este
-> archivo `README.md` y también desplegar tu web a Github Pages :smiley:.
+* Modal de botón de compra
+![img](https://image.ibb.co/btFmtH/screencapture_localhost_8080_1519733006154.png)
+
+##### Proyecto realizado por:
+  - Maria Paz Thompson
+  - Paulina Baeza
+  - Sabrina Villalobos
+  - Camila Cornejos
