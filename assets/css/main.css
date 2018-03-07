@@ -1,0 +1,100 @@
+.row, .col{
+  padding: 0;
+  margin: 0;
+}
+
+#freeShipping{
+  background-color: black;
+}
+#freeShipping a, #freeShipping p{
+  color: white;
+  font-size: 14px;
+  padding: 1vh 0 0 0; 
+}
+
+nav{
+  margin: 2vh 0;
+}
+nav img{
+  width: 15vh;
+}
+
+nav li, .someCategories li{
+  list-style-type: none;
+  display: inline;
+  padding: 0 5vh;
+}
+
+nav a, .show a, .someCategories a{
+  color: black;
+  text-decoration: none;
+} 
+
+.someCategories a:hover, #signIn:hover, #signOut:hover{
+  color: grey;
+  text-decoration: underline;
+}
+
+#inlineFormInputGroup{
+  width: 40vh;
+}
+
+.show {
+  border : 1px solid  #F0F8FF;
+  text-align: center;
+}
+
+/* ------------------ INICIO PRODUCTS */
+.products{
+  width: 80%;
+  margin: 2vh auto;
+  padding: 1vh;
+  border-radius: 2vh;
+}
+
+.productImg{
+  object-fit: cover;
+  object-position: center;
+}
+
+.show li{
+  list-style-type: none;  
+}
+
+.btnView{
+  background-color: black;
+  border: black;
+  color: white;
+}
+
+/* ------------------ FIN PRODUCTS */
+
+
+/* --------- INICIO PAGINA DECO */
+.shortcuts li{
+  display: inline;
+  list-style-type: none;
+}
+
+.shortcuts a{
+  text-decoration: none;  
+  margin: 0 0.2vh;
+  color: black;
+}
+
+.departaments li{
+  list-style-type: none;  
+}
+
+.departaments a{
+  text-decoration: none;  
+  margin: 0 2vh;
+  color: black;
+}
+
+/* --------- FIN PAGINA DECO */
+
+.show {
+  border : 1px solid  #F0F8FF;
+  text-align: center;
+}

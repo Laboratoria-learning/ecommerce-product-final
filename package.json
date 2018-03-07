@@ -1,0 +1,29 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "spa project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Niennis/e_commerce.git"
+  },
+  "keywords": [
+    "spa",
+    "ecommerce"
+  ],
+  "author": "valentina almendra estefania",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Niennis/e_commerce/issues"
+  },
+  "homepage": "https://github.com/Niennis/e_commerce#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "paypal-rest-sdk": "^1.8.1"
+  }
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>E-Commerce</title>
+  <link rel="shortcut icon" href="./assets/img/favicon_insp.ico" type="image/x-icon">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+  <section id="freeShipping">
+    <div class="container">
+      <div class="row justify-content-between align-items-center">
+        <div class=" col-lg-7 col-md-7">
+          <p>FREE SHIPPING on orders above $75</p>
+        </div>
+        <div class=" col-lg-2 col-md-2  ">
+          <p>
+            <a href="">
+              <i class="fas fa-envelope"></i> Email Us</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="container">
+    <div class="row">
+      <div class="col-lg-2 col-md-2">
+        <a href="#deco">
+          <img src="./assets/img/fab_logo.png" alt="">
+        </a>
+      </div>
+      <div class="col-lg-5 col-md-5">
+        <form>
+          <div class="form-row align-items-center">
+            <div class="col-auto">
+              <label class="sr-only" for="inlineFormInputGroup">Username</label>
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+                <input type="text" class="form-control whatShopping" id="inlineFormInputGroup" placeholder="What are you shopping for?">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <i class="far fa-smile"></i>
+                  </div>
+              	</div>
+            	</div>
+						</div>
+					</div>
+        </form>
+      </div>
+      <div class='col-lg-4 col-md-4'>
+        <li>
+          <a href="" id="signIn">SigIn</a>
+        </li>
+        <li>
+          <a href="" id="signOut"><i class="fas fa-lock"></i></a>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+  <section class="container someCategories">
+    <div class="row">
+      <div class="col">
+        <ul>
+          <li>
+            <a href="#new" id="vintageBtn">VINTAGE</a>
+          </li>
+          <li>
+            <a href="#homeDeco" id="homeDecoBtn">DECO</a>
+          </li>
+          <li>
+            <a href="#art" id="artBtn">ART</a>
+          </li>
+          <li>
+            <a href="#tech" id="techBtn">TECH</a>
+          </li>
+          <li>
+            <a href="#gifts" id="booksBtn">BOOKS</a>
+          </li>
+          <li>
+            <a href="#adults" id="adultsBtn">ADULTS ONLY</a>
+          </li>
+          <li>
+            <a href="https://blog.fab.com/?ref=subnav" target="_blank">JOURNAL</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+    
+  <div class="show">
+		<div class="row" id="app">
+
+		</div>
+	</div>
+  
+  <div id="productModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Product Info</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="here">
+        </div>
+          <div class="modal-footer">
+						<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+							<input type="hidden" name="cmd" value="_s-xclick">
+							<input type="hidden" name="hosted_button_id" value="YY6S8TYQ48FGU">
+							<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+							<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+						</form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+    crossorigin="anonymous"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/__/firebase/init.js"></script>
+
+  <script src="./assets/js/handlebars-v4.0.11.js"></script>
+
+	<script id="quote-template" type="text/x-handlebars-template">		
+		<div class="col-md-3 col-sm-6 col-12">
+			<div class="card-group">
+				<div class="card bg-light mb-3" style="width: 18rem;">
+						{{#each thumb}}
+					<img class="card-img-top productImg" src="{{{thumbnail}}}" alt="Card image cap">
+					{{/each}}
+					<div class="card-body">
+							{{#each decoHome}}
+						<h5 class="card-title">{{decoHome}}</h5>
+						{{/each}}
+						{{#each price}}
+						<p class="card-text price">${{price}}</p>
+						{{/each}}
+						{{#each id}}
+						<button class="btn btn-warning btnView" id="view_product" data-id="{{{id}}}">View</button>
+						{{/each}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</script>
+	
+	<script id="product-template" type="text/x-handlebars-template">
+		{{data}}
+		<div class="row">
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+					<h5>{{title}}</h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-4 col-sm-4 col-md-4 col-lg-4">
+				<img src="{{secure_thumbnail}}" alt="">
+		  </div>
+			<div class="col-4 col-sm-4 col-md-4 col-lg-4">
+				<table class="table">
+					<tbody>
+						<tr>
+							<th class="row">Available:</th>
+							<td>{{available_quantity}}</td>
+						</tr>
+						<tr>
+							<th class="row text-capitalize">Condition: {{condition}}</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+      <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+        <table class="table">
+          <tbody>
+            <tr>
+							<th class="row">Sold:</th>
+							<td>{{sold_quantity}}</td>
+						</tr>
+						<tr>
+							<th class="row text-success">${{price}}</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>	
+	</script>
+
+  <script src="assets/js/productinfo.js"></script>
+  <script src="./assets/js/products.js"></script>
+  <script src="./assets/js/route.js"></script>
+  <script src="./assets/js/router.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
