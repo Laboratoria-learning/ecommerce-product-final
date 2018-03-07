@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>pruebasMercadoLibre</title>
+  <link rel="stylesheet" href="pruebaMercadoLibre.css">
+</head>
+<body>
+  <section id="registro">
+    <div class="registro">
+      <input class="form-control mr-sm-2" type="email" id="email" placeholder="Email" aria-label="Email">
+      <input class="form-control mr-sm-2" type="password" id="signup" placeholder="Password" aria-label="Password">
+      <button type="button" class="btn btn-primary" id="login-btn">Log in</button>
+      <button type="button" class="btn btn-primary" id="signup-btn">Sing up</button>
+    </div>
+  </section>
+  <section id="home">
+    <div class="home">
+      <div>
+        <button type="button" class="btn btn-primary" id="logout-btn">Log out</button>  
+        <select name="sitio" id="country" class="siteOfSearch">
+        </select>   
+      </div>
+      <div>
+        <input id="search" type="text" placeholder="Search">
+        <div id="listProductos">
+          <div class="row" id="rowProductos">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="promo">
+    <div id="promociones" class="row">
+      
+    </div>
+    
+  </section>
+
+  <section id="categorias">
+    <div class="row">
+      <div class="col-md-3">
+        <ul id="categories">
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBa7yOADK_7PR-ueajFEPjKf9sIPkMPWqw",
+    authDomain: "mercury-50142.firebaseapp.com",
+    databaseURL: "https://mercury-50142.firebaseio.com",
+    projectId: "mercury-50142",
+    storageBucket: "mercury-50142.appspot.com",
+    messagingSenderId: "1013542528705"
+  };
+  firebase.initializeApp(config);
+</script>
+
+  <script src="pruebaMercadoLibre.js"></script>
+</body>
+</html>
