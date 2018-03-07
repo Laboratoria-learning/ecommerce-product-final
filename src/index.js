@@ -7,12 +7,12 @@ import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
 firebase.initializeApp({
-  apiKey: "AIzaSyDQ0HfeDf7nMVWa4SsJU3eQGHlhmN4UX5E",
-  authDomain: "pretabajo-react.firebaseapp.com",
-  databaseURL: "https://pretabajo-react.firebaseio.com",
-  projectId: "pretabajo-react",
-  storageBucket: "",
-  messagingSenderId: "797792105313"
+  apiKey: 'AIzaSyDQ0HfeDf7nMVWa4SsJU3eQGHlhmN4UX5E',
+  authDomain: 'pretabajo-react.firebaseapp.com',
+  databaseURL: 'https://pretabajo-react.firebaseio.com',
+  projectId: 'pretabajo-react',
+  storageBucket: '',
+  messagingSenderId: '797792105313'
 });
 
 render(<App />, document.getElementById('root'));
