@@ -1,0 +1,42 @@
+.img-r{
+  width: 100px;
+  height: auto;
+}
+
+.h3{
+  height: 50vh;
+}
+
+.h50{
+  height: 60vh;
+}
+
+.title{
+  position: relative;
+  top: 7px;
+}
+
+.price{
+  font-size: 20px;
+}
+
+.font-s{
+  font-size: 16px;
+}
+
+/* 00FAAB*/
+div#PPMiniCart .minicart-item a.minicart-name {
+top:2px;
+line-height: 15px;
+}
+#PPMiniCart .minicart-item{
+  height: 50px;
+}
+#PPMiniCart button.minicart-remove{
+  color: transparent;
+  background: transparent;
+  border:0px solid transparent;
+}
+a.navbar-brand{
+  padding-bottom: 15px;
+}

@@ -1,25 +1,44 @@
-# E-commerce
+<h1  align="center">GAME STORE</h1>
 
-* **Track:** _Especialización Front-end_
-* **Curso:** _CONSTRUYE UNA SINGLE PAGE APP (SPA) MULTI-USUARIO CONSUMIENDO DATA REMOTA_
-* **Unidad:** _Producto final_
+<p align="center">
+<img src="public/assets/images/videojuegos.png">
+</img>
+</p>
+<p align="center">E-commerce</p>
 
-***
+##  **OBJETIVO**
 
-## Flujo de trabajo
+Crear una Single-page Application con el API de Mercado libre y Paypal.
 
-1. Debes realizar un [**fork**](https://gist.github.com/ivandevp/1de47ae69a5e139a6622d78c882e1f74)
-   de este repositorio.
+## **Desarrollo**
+Se utilizó la Api de mercado libre para traer los productos según la categoria.
 
-2. Luego deberás **clonar** tu fork en tu máquina. Recuerda que el comando a usar
-   es `git clone` y su estructura normalmente se ve así:
+![Texto alternativo](public/assets/images/info.jpg "Título de la imagen")
 
-   ```bash
-   git clone https://github.com/<nombre-de-usuario>/freelancer.git
-   ```
+Al hacer click en comprar se habilita un modal con los productos que se desean.
 
-3. Cuando hayas terminado tu producto, envía un Pull Request a este repositorio
-   (puedes solicitar apoyo de tus profes para este paso).
+![Texto alternativo](public/assets/images/info2.jpg "Título de la imagen")
 
-> Nota: No olvides que es una buena práctica describir tu proyecto en este
-> archivo `README.md` y también desplegar tu web a Github Pages :smiley:.
+Para finalizar el pago se redireccionara a la pasarela Paypal.
+
+![Texto alternativo](public/assets/images/info3.jpg "Título de la imagen")
+
+##  Tecnologias Usadas
+- Jquery
+- Bootstrap
+- Javascript
+- Html5
+- Api de Mercado libre
+- Paypal
+- Ajax
+
+## Autores
+
+- **Carla Centeno** - [@carlacentenor](https://github.com/carlacentenor)
+- **Claudia Garibotto** - [@claudiagari](https://github.com/claudiagari)
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia ISC - ver el archivo [LICENSE](https://www.isc.org) para más detalles.
+
+Copyright &copy; 2018 All Rights Reserved.
