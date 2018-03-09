@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<title>eCommerce Site</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+	<header class="fixed-top">
+		<div id="info-bar" class="text-white p-1">
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="col-3">
+						<span>ENVÍO GRATIS <small>en compras sobre $20.000</small></span>
+					</div>
+					<div class="col-3 text-right">
+						<span>
+							<i class="fas fa-envelope mr-2"></i><small> Escríbenos</small>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="main-nav" class="navbar navbar-expand-lg">
+			<nav class="container">
+				<a class="navbar-brand" href="#">Fab</a>
+				<!-- Collapse mobile -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+			aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<form id="searchForm" class="form-inline my-2 my-lg-0 ml-5 mr-auto">
+						<div id="searchBox" class="input-group">
+							<div class="input-group-prepend">
+								<span id="searchIcon" class="input-group-text"><i class="fas fa-search"></i></span>
+							</div>
+							<input type="search" id="searchText" class="form-control" placeholder="Qué quieres comprar?" aria-label="What are you shopping for?" aria-describedby="basic-addon1">
+							<div class="input-group-append">
+								<button id="searchBtn" class="btn btn-outline-secondary" type="submit">Buscar</button>
+							</div>
+						</div>
+					</form>
+					<ul class="navbar-nav">
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Lista de regalos</a>
+						</li>
+						<li class="nav-item">
+							<a id="shoppingCart" class="nav-link" href="#"><i id="shopping" class="fas fa-shopping-bag"></i></a>
+						</li>
+						<li class="nav-item">
+							<button type="button" class="btn btn-outline-secondary btn-sm" id="btn-Google" data-toggle="modal" data-target="#exampleModal">Log In</button>
+						</li>
+					</ul>	
+				</div> <!-- fin Collapse Mobile -->
+			</nav>
+		</div>
+		<div id="category-bar" class="container">
+			<nav class="nav nav-justified text-uppercase">
+				<a class="nav-item nav-link" href="#">novedades</a>
+				<a id="homeBtn" class="nav-item nav-link" href="#home-template">home</a>
+				<a class="nav-item nav-link" href="#">arte</a>
+				<a class="nav-item nav-link" href="#">tech</a>
+				<a class="nav-item nav-link" href="#">regalos</a>
+			</nav>
+		</div>
+	</header>
+	<main id="main" class="container-fluid">
+
+	</main>
+	<footer>
+		<!-- Footer Nav -->
+		<div id="footer-nav">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<ul class="nav pt-2 pb-2 text-left">
+							<li class="nav-item">
+								<a class="nav-link" href="#">Nosotros</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Gift Cards</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Trabaja con nosotros</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">FAQs</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Contacto</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Política de devolución</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Envío</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Condiciones</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Privacidad</a>
+							</li>
+						</ul> <!-- fin Footer Nav -->
+					</div>
+				</div>
+			</div>
+		</div>
+			<!-- Footer links -->
+		<div id="footerLinks">
+			<div class="container">	
+				<div class="row">
+					<div class="col-sm-2 pt-2 pb-2">
+						<h5 class="footerTitle text-uppercase">departamento</h5>
+						<ul>
+							<a href="#"><li>Home</li></a>
+							<a href="#"><li>Arte</li></a>
+							<a href="#"><li>Tech</li></a>
+							<a href="#"><li>Regalos</li></a>
+						</ul>
+					</div>
+					<div class="col-sm-10 pt-2 pb-2">
+						<h5 class="footerTitle text-uppercase">categorías más populares</h5>
+						<ul>
+							<li>Storage & Organization</li>
+							<li>Canvas</li>
+							<li>Home Accents</li>
+							<li>Lighting</li>
+						</ul>
+					</div>
+				</div> <!-- fin Footer links -->
+			</div>	
+		</div>
+		<div id="contact">
+			<div class="container">
+				<div class="row mt-4">
+				<div class="col">
+					<p class="footerText text-uppercase">preguntas?</p>
+					<p class="footerText text-uppercase">escríbenos a: support@fab.com</p>
+				</div>
+				<div class="col text-center">
+					<div class="row">
+						<div class="col-sm-12">
+							<img src="assets/img/app-store.svg">
+						</div>
+					</div>
+					<div class="row">
+						<div class="social col-sm-12 justify-content-between">
+							<a href="#">
+								<i class="fab fa-twitter-square"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-facebook-square"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-pinterest-square"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-5">
+					<p class="footerText">New to Fab? Resgístrate ahora y obtén un 10% off *</p>
+					<small>Además recibe todas las novedades y contenido exclusivo, ofertas y más!</small>
+					<div class="input-group mb-1">
+						<input type="text" class="form-control search-input" placeholder="YOUR EMAIL" aria-label="YOUR EMAIL" aria-describedby="basic-addon2">
+						<div class="input-group-append">
+							<button class="btn btn-outline-secondary" type="button">Continuar</button>
+						</div>
+					</div>
+					<small>* Sólo nuevos clientes. Oferta válida por 30 días. Ver condiciones
+						<a href="">
+							<i class="fas fa-question-circle"></i>
+						</a>
+					</small>
+				</div>
+				</div>
+			</div>
+			
+		</div>
+	</footer>
+	<!-- Templates -->
+	<script id="allproducts-template" type="text/x-handlebars-template">
+		<div class="container">
+			<div class="row pt-3 mb-3">
+				<div class="col-sm-12">
+					<div id="smartphones" class="text-left">
+						<h6 class="ml-5">SMARTPHONES</h6>
+						<div class="row justify-content-center">
+							<div class="col-sm-12">
+								<div class="row">
+									{{#each this}}
+									<div class="col-2">
+										<div class="thumb">
+											<img src="{{thumbnail}}">
+											<a class="productPage" href="#/items/:id">{{title}}</a>
+											<p>$ {{price}}</p>
+										</div>
+									</div>
+									{{/each}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</script>
+	<script id="product-template" type="text/x-handlebars-template">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2 col-sm-12"></div>
+				<div class="col-md-5 col-sm-12">
+					<img src="{{pictures.secure_url}}" class="img-fluid" alt="">
+				</div>
+				<div class="col-md-5 col-sm-12">
+					<div class="pl-5 py-5">
+						<h2>{{title}}</h2>
+					</div>
+					<div class="pl-5 py-3">
+						<h3 class="font-weight-bold">$ {{price}}</h3>
+					</div>
+					<div class="w-25 pl-5 py-3">
+						<select class="custom-select custom-select-sm">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+					</div>
+					<div>
+						<p class="pl-5 text-danger d-inline">ENVIO GRATIS</p>
+						<p class="pl-1 d-inline">sobre $30.000</p>
+					</div>
+					<div class="pl-5 py-3">
+						<button type="button" class="btn btn-danger">Agregar a la bolsa</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<hr>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-12">
+					<h3>Descripción</h3>
+					<div class="pt-2">
+						<p class="text-justify">{{attributes.value_name}}</p>
+					</div>	
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<h3>Más Detalles</h3>
+					<div class="pt-2">
+						<p class="text-justify">{{warranty}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</script>
+	<script id="search-template" type="text/x-handlebars-template">
+		<div class="container">
+			<div class="row pt-3 mb-3">
+				<div class="col-sm-12">
+					<div id="smartphones" class="text-left">
+						<h6 class="ml-5">PRODUCTOS ENCONTRADOS</h6>
+						<div class="row justify-content-center">
+							<div class="col-sm-12">
+								<div class="row">
+									{{#each this}}
+									<div class="col-2">
+										<div class="thumb">
+											<img src="{{thumbnail}}">
+											<a class="productPage" href="#/items/:id">{{title}}</a>
+											<p>$ {{price}}</p>
+										</div>
+									</div>
+									{{/each}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</script>
+	<!-- Script -->
+	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous"></script>
+	<script src="assets/js/sammy-latest.min.js"></script>
+	<script src="assets/js/handlebars-v4.0.11.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	 crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	 crossorigin="anonymous"></script>
+	 <script src="assets/js/login.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>
