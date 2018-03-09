@@ -1,0 +1,25 @@
+{
+  "name": "ecommerse-product-final",
+  "version": "1.0.0",
+  "description": "Crear un foro donde podamos crear temas y responder a esos temas.\r ### Integrantes:\r - Betsy Vidal\r - Araceli Cueva\r - Melissa Yauri",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AraceliCumen/ecommerse-product-final.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AraceliCumen/ecommerse-product-final/issues"
+  },
+  "homepage": "https://github.com/AraceliCumen/ecommerse-product-final#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "nodemon": "^1.17.1"
+  }
+}
