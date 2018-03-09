@@ -1,25 +1,56 @@
 # E-commerce
 
-* **Track:** _Especialización Front-end_
-* **Curso:** _CONSTRUYE UNA SINGLE PAGE APP (SPA) MULTI-USUARIO CONSUMIENDO DATA REMOTA_
-* **Unidad:** _Producto final_
+### Objetivo:
 
-***
+* crear un Single Page Application haciendo uso de APIs de mercado libre y papal.
 
-## Flujo de trabajo
+![Sin titulo](public/assets/docs/alcatel.PNG)
 
-1. Debes realizar un [**fork**](https://gist.github.com/ivandevp/1de47ae69a5e139a6622d78c882e1f74)
-   de este repositorio.
 
-2. Luego deberás **clonar** tu fork en tu máquina. Recuerda que el comando a usar
-   es `git clone` y su estructura normalmente se ve así:
+### Proceso
 
-   ```bash
-   git clone https://github.com/<nombre-de-usuario>/freelancer.git
-   ```
+1. Delimitar el tema para crear el sitio web.
+2. Hacer el diseño del sitio web e-commerce
+3. Obtener la data de la API de mercado libre.
 
-3. Cuando hayas terminado tu producto, envía un Pull Request a este repositorio
-   (puedes solicitar apoyo de tus profes para este paso).
+## Stack utilizado
 
-> Nota: No olvides que es una buena práctica describir tu proyecto en este
-> archivo `README.md` y también desplegar tu web a Github Pages :smiley:.
+- Node.js
+
+- Express
+[Express - Hello Wordl](http://expressjs.com/en/starter/hello-world.html)
+[Express - Basic Routing](http://expressjs.com/en/starter/basic-routing.html)
+[Express - Static Files](http://expressjs.com/en/starter/static-files.html)
+
+- Jquery
+
+- Ajax
+
+## Comenzar con el proyecto
+
+Para inicializar el proyecto debes tener node instalado, para correrlo en un servidor local, encontrarás un archivo `package.json`, donde se encuentran las dependencias y configuración. 
+Para primero deberás instalar las dependecias con el comando.
+
+```
+npm install
+```
+
+Ahora debes instalar nodemon con el siguiente comando
+
+```
+npm install nodemon -g --save
+```
+
+Luego levantas el servidor a través de este comando
+
+```
+npm start
+```
+
+### Desarollado para
+
+[Laboratoria](http://laboratoria.la)
+
+#### Integrantes:
+- Betsy Vidal
+- Melyna Pernia
