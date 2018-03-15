@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: black;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-image: url(../images/bg_makeup50.png);
+  background-repeat: repeat;
+}
+
+.tabs .tab a {
+  color: #FFF;
+}
+
+.main-content {
+   background-color: #fff;
+   padding: 3em;
+}
+
+.product-title, .product-title a {
+  font-size: 1.2em;
+  color: #ee6e73;
+}
+
+.logo {
+  width: 50%;
+}
+
+.slider {
+  font-family: 'Amatic SC', cursive;
+  background-color: black;
+}
+
+.slider h3 {
+  color: black;
+  background-color: #FADEC8;
+  border-radius: 5px;
+  line-height: 70px;
+  display: inline;
+  padding: 5px;
+}
+
+.main-content {
+  background-color: transparent;
+}
+
+.item-container h2 {
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+
+.item-container button {
+  margin: 10px 0;
+  color: #F06E73;
+  font-weight: bold;
+}
+
+.item-container {
+  background-color: white;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.item-container span {
+  font-size: 20px;
+  color: #F06E73;
+  font-weight: bold; 
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.buy a{
+  color: #EE6E73;
+}
+
+.cart {
+  padding: 0 15px;
+  font-size: 15px;
+}

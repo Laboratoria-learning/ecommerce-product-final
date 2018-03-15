@@ -1,0 +1,33 @@
+{
+  "name": "beauty-sales-spa",
+  "version": "1.0.0",
+  "description": "Ecommerce\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[CBeauty Ecommerce",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamybl/beautysales-spa.git"
+  },
+  "keywords": [
+    "beauty",
+    "spa",
+    "ecommerce"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tamybl/beautysales-spa/issues"
+  },
+  "homepage": "https://github.com/tamybl/beautysales-spa#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "paypal-rest-sdk": "^1.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.1",
+    "eslint-config-google": "^0.9.1"
+  }
+}

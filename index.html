@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+  <title>Beauty Sales</title>
+  <link rel="stylesheet" href="assets/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Lato" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo center">
+          <img class="logo" src="assets/images/logosolo.png" alt="">
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a id="shop" href="">
+              <i class="fas fa-shopping-cart"></i> Cart (0)</a>
+            </li>
+            <li>
+              <a mp-mode="dftl" href="https://www.mercadopago.com/mlc/checkout/pay?pref_id=176718880-409c9cc0-88b0-4ad2-8b9f-2f7943581965" name="MP-payButton">Pay</a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fas fa-user"></i> My Account</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="slider">
+        <ul class="slides">
+          <li>
+            <img src="assets/images/slider/women-love-makeup.jpg">
+            <!-- random image -->
+            <div class="caption center-align">
+              <h3>Welcome to PINT Store</h3>
+            </div>
+          </li>
+          <li>
+            <img src="assets/images/slider/cruelty-free-makeup.jpg">
+            <!-- random image -->
+            <div class="caption left-align">
+              <h3>Browse our tags</h3>
+            </div>
+          </li>
+          <li>
+            <img src="assets/images/slider/women-natural-make-up.jpg">
+            <!-- random image -->
+            <div class="caption right-align">
+              <h3>Try our products</h3>
+              <h5 class="light grey-text text-lighten-3">We care about your skin</h5>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-content">
+        <ul class="tabs categories page center-align grey darken-4">
+          <!-- Categories Here -->
+          <li class="tab">
+            <a id="home">Home</a>
+          </li>
+          <li class="tab">
+            <a id="blush">Blush</a>
+          </li>
+          <li class="tab">
+            <a id="bronzer">Bronzer</a>
+          </li>
+          <li class="tab">
+            <a id="eyebrow">Eyebrow</a>
+          </li>
+          <li class="tab">
+            <a id="eyeliner">Eyeliner</a>
+          </li>
+          <li class="tab">
+            <a id="eyeshadow">Eyeshadow</a>
+          </li>
+          <li class="tab">
+            <a id="foundation">Foundation</a>
+          </li>
+          <li class="tab">
+            <a id="lip_liner">Lip liner</a>
+          </li>
+          <li class="tab">
+            <a id="lipstick">Lipstick</a>
+          </li>
+          <li class="tab">
+            <a id="mascara">Mascara</a>
+          </li>
+          <li class="tab">
+            <a id="nail_polish">Nail polish</a>
+          </li>
+        </ul>
+      </div>
+      <main class="main-content">
+        <div class="all-products page">
+          <ul class="products-list row">
+            <script id="products-template" type="x-handlebars-template">
+              {{#each this}}
+              <li data-index="{{id}}" class="col s12 m4 item-container">
+              <a href="#" class="product-photo center-align"><img src="{{image_link}}" class="responsive-img" alt="{{name}}"/></a>
+              <h2 class="product-title"><a href="{{product_link}}"> {{name}} </a></h2>
+              <ul class="product-description">
+              <div class="row">
+              <div class="col s6">
+              <li class="brand"><span>Brand: </span>{{brand}}</li>
+              </div>
+              <div class="col s6">
+              <p class="product-price right-align price">{{price}} {{price_sign}}</p>
+              </div>
+              </div>
+              </ul>
+              <div class="col s6 center-align">
+              <button class="waves-effect waves-light btn buy grey darken-4"><a mp-mode="dftl" href='https://www.mercadopago.com/mlc/checkout/pay?pref_id=176718880-409c9cc0-88b0-4ad2-8b9f-2f7943581965' name="MP-payButton" class="blue-ar-l-rn-none mercado">Buy now!</a></button>
+              </div>
+
+              <div class="col s6 center-align">
+              <button class="waves-effect waves-light btn cart grey darken-4" data-id="{{id}}" data-name="{{name}}" onclick='addToCart()'>Add to cart </button>
+              </div>
+              <div class="highlight"></div>
+              </li>
+              {{/each}}
+            </script>
+          </ul>
+        </div>
+        
+    <!-- Single Details -->
+    <div class="single-product page"></div>
+    <div class="error page"></div>
+
+    
+    <ul class="pagination center-align">
+      <li class="disabled"><a href="#!"><i class="fas fa-arrow-left"></i></a></li>
+      <li class="active"><a href="#!">1</a></li>
+      <li class="waves-effect"><a href="#!">2</a></li>
+      <li class="waves-effect"><a href="#!">3</a></li>
+      <li class="waves-effect"><a href="#!">4</a></li>
+      <li class="waves-effect"><a href="#!">5</a></li>
+      <li class="waves-effect"><a href="#!"><i class="fas fa-arrow-right"></i></a></li>
+    </ul>
+
+  </main>
+  <footer class="page-footer grey darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">PINT Store</h5>
+          <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, eveniet necessitatibus cumque. Non, nulla, voluptates.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="#!">Facebook</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="#!">Instagram</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="#!">Youtube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <div class="container">
+        2018 © PINT
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript">
+    (function () { function $MPC_load() { window.$MPC_loaded !== true && (function () { var s = document.createElement("script"); s.type = "text/javascript"; s.async = true; s.src = document.location.protocol + "//secure.mlstatic.com/mptools/render.js"; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); window.$MPC_loaded = true; })(); } window.$MPC_loaded !== true ? (window.attachEvent ? window.attachEvent('onload', $MPC_load) : window.addEventListener('load', $MPC_load, false)) : null; })();
+  </script>
+</main>
+
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/handlebars-v4.0.11.js"></script>
+<script src="assets/js/materialize.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
