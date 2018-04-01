@@ -1,0 +1,32 @@
+[debug] [2018-02-27T13:22:17.922Z] ----------------------------------------------------------------------
+[debug] [2018-02-27T13:22:17.926Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\valen\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-02-27T13:22:17.926Z] CLI Version:   3.17.4
+[debug] [2018-02-27T13:22:17.926Z] Platform:      win32
+[debug] [2018-02-27T13:22:17.926Z] Node Version:  v8.9.4
+[debug] [2018-02-27T13:22:17.927Z] Time:          Tue Feb 27 2018 10:22:17 GMT-0300 (Hora verano Sudamérica Pacífico)
+[debug] [2018-02-27T13:22:17.927Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-27T13:22:17.940Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-27T13:22:17.943Z] > authorizing via signed-in user
+[debug] [2018-02-27T13:22:17.945Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/lab-commerce  
+  
+ Tue Feb 27 2018 10:22:17 GMT-0300 (Hora verano Sudamérica Pacífico)
+[debug] [2018-02-27T13:22:19.199Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-27T13:22:19.216Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/lab-commerce/tokens  
+  
+ Tue Feb 27 2018 10:22:19 GMT-0300 (Hora verano Sudamérica Pacífico)
+[debug] [2018-02-27T13:22:20.327Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\valen\Desktop\e_commerce'...
+[info] 
+[debug] [2018-02-27T13:22:20.335Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/lab-commerce  
+  
+ Tue Feb 27 2018 10:22:20 GMT-0300 (Hora verano Sudamérica Pacífico)
+[debug] [2018-02-27T13:22:21.447Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-27T13:22:21.447Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1070810109357/clients/_:getWebAppConfig  
+  
+ Tue Feb 27 2018 10:22:21 GMT-0300 (Hora verano Sudamérica Pacífico)
+[debug] [2018-02-27T13:22:22.286Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+

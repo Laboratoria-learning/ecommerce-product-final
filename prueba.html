@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>E-Commerde</title>
+	<link rel="shortcut icon" href="./assets/img/favicon_insp.ico" type="image/x-icon">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body>
+	<section id="freeShipping">
+		<div class="container">
+			<div class="row justify-content-between align-items-center">
+				<div class=" col-lg-7 col-md-7">
+					<p>FREE SHIPPING on orders above $75</p>
+				</div>
+				<div class=" col-lg-2 col-md-2	">
+					<p><a href=""><i class="fas fa-envelope"></i> Email Us</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<nav class="container">
+		<div class="row">
+			<div class="col-2">
+				<a href="#deco"><img src="./assets/img/fab_logo.png" alt=""></a>				
+			</div>
+			<div class="col-6">
+				<form>
+					<div class="form-row align-items-center">
+						<div class="col-auto">
+							<label class="sr-only" for="inlineFormInputGroup">Username</label>
+							<div class="input-group mb-2">
+								<div class="input-group-prepend">
+									<div class="input-group-text"><i class="fas fa-search"></i></div>
+								</div>
+								<input type="text" class="form-control whatShopping" id="inlineFormInputGroup" placeholder="What are you shopping for?">
+								<div class="input-group-append">
+										<div class="input-group-text"><i class="far fa-smile"></i></div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div>
+				<li><a href="" id="signIn">Sigin</a></li>
+				<li><a href="" id="signOut">Signout</a></li>
+			</div>
+		</div>
+	</nav>
+
+	<section class="container">
+		<div class="row">
+			<div class="col">
+				<ul>
+					<li><a href="#new" id="vintageBtn">VINTAGE</a></li>
+					<li><a href="#homeDeco" id="homeDecoBtn">DECO</a></li>
+					<li><a href="#art" id="artBtn">ART</a></li>
+					<li><a href="#tech" id="techBtn">TECH</a></li>
+					<li><a href="#gifts" id="booksBtn">BOOKS</a></li>
+					<li><a href="#adults" id="adultsBtn">ADULTS ONLY</a></li>
+					<li><a href="https://blog.fab.com/?ref=subnav" target="_blank">JOURNAL</a></li>
+				</ul>
+			</div>
+		</div>		
+	</section>
+	<section id="payment">
+		<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  PAGA! 
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <a href="views/index.ejs">Paga porfavor porfavor T-T</a>
+      </div>
+    </div>
+  </div>
+</div>
+	</section>
+
+	<div id="app">
+
+		</div>
+	<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="/__/firebase/init.js"></script>
+
+  <script src="./assets/js/handlebars-v4.0.11.js"></script>
+
+  <script id="quote-template" type="text/x-handlebars-template">
+
+    <ul class="products">
+        {{#each thumb}}
+        <li><img src="{{{thumbnail}}}" alt=""></li>
+        {{/each}}
+        {{#each decoHome}}
+        <li>{{decoHome}}</li>
+        {{/each}}
+        {{#each available}}
+        <li>Cantidad disponible: {{available}}</li>
+        {{/each}}
+        {{#each price}}
+        <li>Precio: ${{price}}</li>        
+				{{/each}}
+				{{#each id}}
+				<li><button class="btn btn-warning" data-id="{{{id}}}">View</button></li>
+				{{/each}}
+    </ul>
+  </script>
+	<script src="./assets/js/products.js"></script>
+	<script src="./assets/js/route.js"></script>
+	<script src="./assets/js/router.js"></script>
+	<script src="./assets/js/main.js"></script>
+	
+</body>
+</html>
